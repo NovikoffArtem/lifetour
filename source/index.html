@@ -34,9 +34,9 @@
   <header data-test="header">
     <div class="header__wrapper">
       <div class="header__content-wrapper">
-        <div class="header__logo">
-          <img src="img/logo/logo.svg" alt="Логотип" width="142" height="42">
-        </div>
+        <a class="header__logo">
+          <img class="logo logo--header" src="img/images/logo/logo.svg" alt="Логотип" width="142" height="42">
+        </a>
         <nav class="header__nav header__nav--closed nav">
           <ul class="nav__list">
             <button class="nav__toggle button" type="button">
@@ -56,37 +56,81 @@
   </header>
   <main>
     <section class="hero" data-test="hero">
-      <div class="hero__wrapper">
+      <div class="hero__wrapper swiper">
 
-        <div class="hero__item">
-          <h1>Захватывающие вершины Кавказа</h1>
-          <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход
-            на вершину горы Чегет.</p>
-          <a class="hero__link button" href="#">Смотреть тур</a>
-          <div class="hero__bottom-wrapper">
-            <div class="hero__tour-option">
-              <span class="hero__option hero__option--duration">6 дней/5 ночей</span>
-              <span class="hero__option hero__option--level">Высокая сложность</span>
+        <div class="hero__swiper-wrapper swiper-wrapper">
+
+          <div class="hero__item hero__item--caucasus swiper-slide">
+            <h1>Захватывающие вершины Кавказа</h1>
+            <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход
+              на вершину горы Чегет.</p>
+            <a class="hero__link button--primary button" href="#">Смотреть тур</a>
+            <div class="hero__bottom-wrapper">
+              <div class="hero__tour-option">
+                <span class="hero__option hero__option--duration">6 дней/5 ночей</span>
+                <span class="hero__option hero__option--level">Высокая сложность</span>
+              </div>
             </div>
-            <div class="hero__pagination">
-            </div>
+            <picture>
+              <source media="(min-width: 940px)" type="image/webp" srcset="img/images/hero/hero-caucasus-desktop@1x.webp 1x, img/images/hero/hero-caucasus-desktop@2x.webp 2x" width="1440" height="800">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/images/hero/hero-caucasus-tablet@1x.webp 1x, img/images/hero/hero-caucasus-tablet@2x.webp 2x" width="768" height="1034">
+              <source type="image/webp" srcset="img/images/hero/hero-caucasus-tablet@1x.webp 1x, img/images/hero/hero-caucasus-tablet@2x.webp 2x" width="320" height="568">
+              <source media="(min-width: 940px)" type="image/jpg" srcset="img/images/hero/hero-caucasus-desktop@1x.jpg 1x, img/images/hero/hero-caucasus-desktop@2x.jpg 2x" width="1440" height="800">
+              <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/hero/hero-caucasus-tablet@1x.jpg 1x, img/images/hero/hero-caucasus-tablet@2x.jpg 2x" width="768" height="1034">
+              <img class="hero__image" src="img/images/hero/hero-caucasus-tablet@1x.jpg" srcset="img/images/hero/hero-caucasus-tablet@2x.jpg 2x" width="320" height="568" alt="Захватывающие вершины Кавказа" loading="lazy">
+            </picture>
           </div>
-          <picture>
-            <source media="(min-width: 940px)" type="image/webp" srcset="img/images/hero/hero-caucasus-desktop@1x.webp 1x, img/images/hero/hero-caucasus-desktop@2x.webp 2x" width="1440" height="800">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/hero/hero-caucasus-tablet@1x.webp 1x, img/images/hero/hero-caucasus-tablet@2x.webp 2x" width="768" height="1034">
-            <source type="image/webp" srcset="img/images/hero/hero-caucasus-tablet@1x.webp 1x, img/images/hero/hero-caucasus-tablet@2x.webp 2x" width="320" height="568">
-            <source media="(min-width: 940px)" type="image/jpg" srcset="img/images/hero/hero-caucasus-desktop@1x.jpg 1x, img/images/hero/hero-caucasus-desktop@2x.jpg 2x" width="1440" height="800">
-            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/hero/hero-caucasus-tablet@1x.jpg 1x, img/images/hero/hero-caucasus-tablet@2x.jpg 2x" width="768" height="1034">
-            <img class="hero__image" src="img/images/hero/hero-caucasus-tablet@1x.jpg" srcset="img/images/hero/hero-caucasus-tablet@2x.jpg 2x" width="320" height="568" alt="Захватывающие вершины Кавказа" loading="lazy">
-          </picture>
+
+          <div class="hero__item hero__item--kamch swiper-slide">
+            <h1>Невероятная природа Камчатки</h1>
+            <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+            <a class="hero__link button--primary button" href="#">Смотреть тур</a>
+            <div class="hero__bottom-wrapper">
+              <div class="hero__tour-option">
+                <span class="hero__option hero__option--duration">9 дней/10 ночей</span>
+                <span class="hero__option hero__option--level">Средняя сложность</span>
+              </div>
+            </div>
+            <picture>
+              <source media="(min-width: 940px)" type="image/webp" srcset="img/images/hero/hero-kamch-desktop@1x.webp 1x, img/images/hero/hero-kamch-desktop@2x.webp 2x" width="1440" height="800">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/images/hero/hero-kamch-tablet@1x.webp 1x, img/images/hero/hero-kamch-tablet@2x.webp 2x" width="768" height="1034">
+              <source type="image/webp" srcset="img/images/hero/hero-kamch-tablet@1x.webp 1x, img/images/hero/hero-kamch-tablet@2x.webp 2x" width="320" height="568">
+              <source media="(min-width: 940px)" type="image/jpg" srcset="img/images/hero/hero-kamch-desktop@1x.jpg 1x, img/images/hero/hero-kamch-desktop@2x.jpg 2x" width="1440" height="800">
+              <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/hero/hero-kamch-tablet@1x.jpg 1x, img/images/hero/hero-kamch-tablet@2x.jpg 2x" width="768" height="1034">
+              <img class="hero__image" src="img/images/hero/hero-kamch-tablet@1x.jpg" srcset="img/images/hero/hero-kamch-tablet@2x.jpg 2x" width="320" height="568" alt="Захватывающие вершины Кавказа" loading="lazy">
+            </picture>
+          </div>
+
+          <div class="hero__item hero__item--altay swiper-slide">
+            <h1>Магические пейзажи Алтайского Края</h1>
+            <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
+            <a class="hero__link button--primary button" href="#">Смотреть тур</a>
+            <div class="hero__bottom-wrapper">
+              <div class="hero__tour-option">
+                <span class="hero__option hero__option--duration">8 дней/7 ночей</span>
+                <span class="hero__option hero__option--level">Лёгкая сложность</span>
+              </div>
+            </div>
+            <picture>
+              <source media="(min-width: 940px)" type="image/webp" srcset="img/images/hero/hero-altay-desktop@1x.webp 1x, img/images/hero/hero-altay-desktop@2x.webp 2x" width="1440" height="800">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/images/hero/hero-altay-tablet@1x.webp 1x, img/images/hero/hero-altay-tablet@2x.webp 2x" width="768" height="1034">
+              <source type="image/webp" srcset="img/images/hero/hero-altay-tablet@1x.webp 1x, img/images/hero/hero-altay-tablet@2x.webp 2x" width="320" height="568">
+              <source media="(min-width: 940px)" type="image/jpg" srcset="img/images/hero/hero-altay-desktop@1x.jpg 1x, img/images/hero/hero-altay-desktop@2x.jpg 2x" width="1440" height="800">
+              <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/hero/hero-altay-tablet@1x.jpg 1x, img/images/hero/hero-altay-tablet@2x.jpg 2x" width="768" height="1034">
+              <img class="hero__image" src="img/images/hero/hero-altay-tablet@1x.jpg" srcset="img/images/hero/hero-altay-tablet@2x.jpg 2x" width="320" height="568" alt="Захватывающие вершины Кавказа" loading="lazy">
+            </picture>
+          </div>
+
+        </div>
+        <div class="hero__pagination swiper-pagination">
         </div>
       </div>
     </section>
     <section class="tours" data-test="tours">
       <div class="tours__wrapper content-wrapper">
-        <div class="tours__title-wrapper">
+        <div class="tours__title-wrapper title-wrapper">
           <h2 class="tours__title section__title">Ближайшие туры</h2>
-          <div class="tours__buttons">
+          <div class="tours__buttons swiper-buttons__wrapper">
             <button class="swiper-button swiper-button--tours-prev" type="button" aria-label="Предыдущий тур"></button>
             <button class="swiper-button swiper-button--tours-next" type="button" aria-label="Следующий тур"></button>
           </div>
@@ -216,7 +260,386 @@
         <a class="tours__link" href="#">Показать все туры</a>
       </div>
     </section>
+    <section class="training">
+      <h2 class="training__title section__title">Обучение</h2>
+      <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+      <div class="training__trainers-title-wrapper title-wrapper">
+        <h3 class="training__trainers-title">Наши инструкторы</h3>
+        <div class="training__buttons swiper-buttons__wrapper">
+          <button class="swiper-button swiper-button--trainer-prev" type="button" aria-label="Предыдущий тренер"></button>
+          <button class="swiper-button swiper-button--trainer-next" type="button" aria-label="Следующий тренер"></button>
+        </div>
+      </div>
+      <ul class="training__trainers-list trainers">
+
+        <li class="trainers-card">
+          <picture>
+            <source type="image/webp" srcset="img/images/trainers/trainers-prokofyev@1x.webp 1x, img/images/trainers/trainers-prokofyev@2x.webp 2x" width="260" height="200">
+            <img class="trainers-card__image" src="img/images/trainers/trainers-prokofyev@1x.jpg" srcset="img/images/trainers/trainers-prokofyev@2x.jpg 2x" width="260" height="200" alt="фотография Александра Прокофьева" loading="lazy">
+          </picture>
+          <h3>Александр Прокофьев</h3>
+          <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
+        </li>
+
+        <li class="trainers-card">
+          <picture>
+            <source type="image/webp" srcset="img/images/trainers/trainers-afinogenova@1x.webp 1x, img/images/trainers/trainers-afinogenova@2x.webp 2x" width="260" height="200">
+            <img class="trainers-card__image" src="img/images/trainers/trainers-afinogenova@1x.jpg" srcset="img/images/trainers/trainers-afinogenova@2x.jpg 2x" width="260" height="200" alt="на фотографии Светлана Афиногенова" loading="lazy">
+          </picture>
+          <h3>Светлана Афиногенова</h3>
+          <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
+        </li>
+
+        <li class="trainers-card">
+          <picture>
+            <source type="image/webp" srcset="img/images/trainers/trainers-kolesnichenko@1x.webp 1x, img/images/trainers/trainers-kolesnichenko@2x.webp 2x" width="260" height="200">
+            <img class="trainers-card__image" src="img/images/trainers/trainers-kolesnichenko@1x.jpg" srcset="img/images/trainers/trainers-kolesnichenko@2x.jpg 2x" width="260" height="200" alt="На фотографии Надежда Колесниченко" loading="lazy">
+          </picture>
+          <h3>Надежда Колесниченко</h3>
+          <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно и уверенно.</p>
+        </li>
+
+        <li class="trainers-card">
+          <picture>
+            <source type="image/webp" srcset="img/images/trainers/trainers-kaygorodov@1x.webp 1x, img/images/trainers/trainers-kaygorodov@2x.webp 2x" width="260" height="200">
+            <img class="trainers-card__image" src="img/images/trainers/trainers-kaygorodov@1x.jpg" srcset="img/images/trainers/trainers-kaygorodov@2x.jpg 2x" width="260" height="200" alt="На фотографии Федор Кайгородов" loading="lazy">
+          </picture>
+          <h3>Федор Кайгородов</h3>
+          <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
+        </li>
+
+        <li class="trainers-card">
+          <picture>
+            <source type="image/webp" srcset="img/images/trainers/trainers-vasnetsov@1x.webp 1x, img/images/trainers/trainers-vasnetsov@2x.webp 2x" width="260" height="200">
+            <img class="trainers-card__image" src="img/images/trainers/trainers-vasnetsov@1x.jpg" srcset="img/images/trainers/trainers-vasnetsov@2x.jpg 2x" width="260" height="200" alt="На фотографии Даниэль Васнецов" loading="lazy">
+          </picture>
+          <h3>Даниэль Васнецов</h3>
+          <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
+        </li>
+
+      </ul>
+      <h3 class="training__process-title">Процесс обучения</h3>
+      <ul class="training__process-list trainig-process">
+
+        <li class="trainig-process__item trainig-process__item--map">
+          <p class="trainig-process__desc">Изучение спортивного туристского движения</p>
+        </li>
+
+        <li class="trainig-process__item trainig-process__item--boot">
+          <p class="trainig-process__desc">Подготовка и техническое снаряжение в походах</p>
+        </li>
+
+        <li class="trainig-process__item trainig-process__item--pine">
+          <p class="trainig-process__desc">Лекции по окружающей среде, экологии и гигиене</p>
+        </li>
+
+        <li class="trainig-process__item trainig-process__item--mountain">
+          <p class="trainig-process__desc">Разъяснение сложности горных препятствий</p>
+        </li>
+      </ul>
+    </section>
+    <section class="about">
+      <picture>
+        <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/about/about-desktop@1x.webp 1x, img/images/about/about-desktop@2x.webp 2x" width="660" height="498">
+        <source media="(min-width: 768px)" type="image/webp" srcset="img/images/about/about-tablet@1x.webp 1x, img/images/about/about-tablet@2x.webp 2x" width="542" height="350">
+        <source type="image/webp" srcset="img/images/about/about-tablet@1x.webp 1x, img/images/about/about-tablet@2x.webp 2x" width="320" height="400">
+        <source media="(min-width: 1440px)" type="image/png" srcset="img/images/about/about-desktop@1x.png 1x, img/images/about/about-desktop@2x.png 2x" width="660" height="498">
+        <source media="(min-width: 768px)" type="image/png" srcset="img/images/about/about-tablet@1x.png 1x, img/images/about/about-tablet@2x.png 2x" width="542" height="350">
+        <img class="about__image" src="img/images/about/about-tablet@1x.png" srcset="img/images/about/about-tablet@2x.png 2x" width="320" height="400" alt="" loading="lazy">
+      </picture>
+      <h2>О нас</h2>
+      <h3>История компании</h3>
+      <p>В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам это настолько понравилось, что мы этим стали жить. Спустя 5 лет, в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
+      <h3>Наша цель</h3>
+      <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной компании.</p>
+    </section>
+
+    <section class="reviews">
+      <div class="reviews__title-wrapper title-wrapper">
+        <h3 class="reviews__title section__title">Отзывы</h3>
+        <div class="reviews__buttons swiper-buttons__wrapper">
+          <button class="swiper-button swiper-button--review-prev" type="button" aria-label="Предыдущий отзыв"></button>
+          <button class="swiper-button swiper-button--review-next" type="button" aria-label="Следующий отзыв"></button>
+        </div>
+      </div>
+
+      <ul class="reviews__list">
+
+        <li class="reviews__item">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/reviews/reviews-frolov-desktop@1x.webp 1x, img/images/reviews/reviews-frolov-desktop@2x.webp 2x" width="258" height="253">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/reviews/reviews-frolov-tablet@1x.webp 1x, img/images/reviews/reviews-frolov-tablet@2x.webp 2x" width="186" height="237">
+            <source type="image/webp" srcset="img/images/reviews/reviews-frolov-mobile@1x.webp 1x, img/images/reviews/reviews-frolov-mobile@2x.webp 2x" width="250" height="169">
+            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/reviews/reviews-frolov-desktop@1x.jpg 1x, img/images/reviews/reviews-frolov-desktop@2x.jpg 2x" width="258" height="253">
+            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/reviews/reviews-frolov-tablet@1x.jpg 1x, img/images/reviews/reviews-frolov-tablet@2x.jpg 2x" width="186" height="237">
+            <img class="reviews__image" src="img/images/reviews/reviews-frolov-mobile@1x.jpg" srcset="img/images/reviews/reviews-frolov-mobile@2x.jpg 2x" width="250" height="169" alt="На фотографии Фролов Александр" loading="lazy">
+          </picture>
+          <div class="reviews__text-content">
+            <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
+            <p>С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</p>
+            <span class="reviews__author-name">Фролов Александр</span>
+            <span class="reviews__author-desc">36 лет, Москва</span>
+          </div>
+        </li>
+
+        <li class="reviews__item">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/reviews/reviews-solovyev-desktop@1x.webp 1x, img/images/reviews/reviews-solovyev-desktop@2x.webp 2x" width="258" height="253">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/reviews/reviews-solovyev-tablet@1x.webp 1x, img/images/reviews/reviews-solovyev-tablet@2x.webp 2x" width="186" height="237">
+            <source type="image/webp" srcset="img/images/reviews/reviews-solovyev-mobile@1x.webp 1x, img/images/reviews/reviews-solovyev-mobile@2x.webp 2x" width="250" height="169">
+            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/reviews/reviews-solovyev-desktop@1x.jpg 1x, img/images/reviews/reviews-solovyev-desktop@2x.jpg 2x" width="258" height="253">
+            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/reviews/reviews-solovyev-tablet@1x.jpg 1x, img/images/reviews/reviews-solovyev-tablet@2x.jpg 2x" width="186" height="237">
+            <img class="reviews__image" src="img/images/reviews/reviews-solovyev-mobile@1x.jpg" srcset="img/images/reviews/reviews-solovyev-mobile@2x.jpg 2x" width="250" height="169" alt="На фотографии Иван Соловьёв" loading="lazy">
+          </picture>
+          <div class="reviews__text-content">
+            <p>Хороший полноценный поход с разнообразными локациями. В начале дорога идёт по лыжне, далее прошли мимо полигона, по болотам, у озёр и лесных ручьёв, остатков дач конца 19 века.
+              Было очень интересно!</p>
+            <p>Инструктор Федор дружелюбный, внимательный к технике безопасности и своим туристам.
+              Всем советую этот тур.</p>
+            <span class="reviews__author-name">Иван Соловьёв</span>
+            <span class="reviews__author-desc">25 лет, Владивосток</span>
+          </div>
+        </li>
+
+        <li class="reviews__item">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/reviews/reviews-bajenova-desktop@1x.webp 1x, img/images/reviews/reviews-bajenova-desktop@2x.webp 2x" width="258" height="253">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/reviews/reviews-bajenova-tablet@1x.webp 1x, img/images/reviews/reviews-bajenova-tablet@2x.webp 2x" width="186" height="237">
+            <source type="image/webp" srcset="img/images/reviews/reviews-bajenova-mobile@1x.webp 1x, img/images/reviews/reviews-bajenova-mobile@2x.webp 2x" width="250" height="169">
+            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/reviews/reviews-bajenova-desktop@1x.jpg 1x, img/images/reviews/reviews-bajenova-desktop@2x.jpg 2x" width="258" height="253">
+            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/reviews/reviews-bajenova-tablet@1x.jpg 1x, img/images/reviews/reviews-bajenova-tablet@2x.jpg 2x" width="186" height="237">
+            <img class="reviews__image" src="img/images/reviews/reviews-bajenova-mobile@1x.jpg" srcset="img/images/reviews/reviews-bajenova-mobile@2x.jpg 2x" width="250" height="169" alt="На фотографии Евгения Баженова" loading="lazy">
+          </picture>
+          <div class="reviews__text-content">
+            <p>Ранее не ходила на такие длинные дистанции. В первый день прошли около 30 км, физически я устала на 18 км, поэтому не была уверена, пройду ли до конца. Но я справилась. Второй день прошёл легче, чем ожидала, видимо организм уже привык.</p>
+            <p>Спасибо ребятам, инструкторам за помощь и поддержку! Я была рада быть в такой компании.</p>
+            <span class="reviews__author-name">Евгения Баженова</span>
+            <span class="reviews__author-desc">23 года, Кострома</span>
+          </div>
+        </li>
+
+        <li class="reviews__item">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/reviews/reviews-pirogova-desktop@1x.webp 1x, img/images/reviews/reviews-pirogova-desktop@2x.webp 2x" width="258" height="253">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/reviews/reviews-pirogova-tablet@1x.webp 1x, img/images/reviews/reviews-pirogova-tablet@2x.webp 2x" width="186" height="237">
+            <source type="image/webp" srcset="img/images/reviews/reviews-pirogova-mobile@1x.webp 1x, img/images/reviews/reviews-pirogova-mobile@2x.webp 2x" width="250" height="169">
+            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/reviews/reviews-pirogova-desktop@1x.jpg 1x, img/images/reviews/reviews-pirogova-desktop@2x.jpg 2x" width="258" height="253">
+            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/reviews/reviews-pirogova-tablet@1x.jpg 1x, img/images/reviews/reviews-pirogova-tablet@2x.jpg 2x" width="186" height="237">
+            <img class="reviews__image" src="img/images/reviews/reviews-pirogova-mobile@1x.jpg" srcset="img/images/reviews/reviews-pirogova-mobile@2x.jpg 2x" width="250" height="169" alt="На фотографии Елена Пирогова" loading="lazy">
+          </picture>
+          <div class="reviews__text-content">
+            <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину. </p>
+            <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</p>
+            <span class="reviews__author-name">Елена Пирогова</span>
+            <span class="reviews__author-desc">37 лет, Тюмень</span>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="advantages">
+      <h2 class="advantages__title section__title">Преимущества</h2>
+      <ul class="advantages__list">
+        <li class="advantages__item advantages__item--safety">
+          <h3>Безопасность</h3>
+          <p>Уделяем внимание безопасности клиентов, внедряя строгие процедуры и протоколы безопасности. Имеем планы действий на случай непредвиденных обстоятельств и даём гарантию полной безопасности во время всего тура.</p>
+        </li>
+
+        <li class="advantages__item advantages__item--expertise">
+          <h3>Экспертиза и знания</h3>
+          <p>Наша команда опытных гидов имеет обширные знания о местности, погодных условиях и технике безопасности. Это гарантирует, что наши клиенты находятся в надёжных руках и могут в полной мере насладиться опытом без опасений.</p>
+        </li>
+
+        <li class="advantages__item advantages__item--equipment">
+          <h3>Оборудование и снаряжение</h3>
+          <p>Мы предоставляем клиентам все необходимое оборудование, необходимое для путешествия. Это избавляет клиентов от необходимости покупать, брать с собой снаряжение, что делает путешествие более удобным и экономически выгодным.</p>
+        </li>
+
+        <li class="advantages__item advantages__item--routes">
+          <h3>Индивидуальные маршруты</h3>
+          <p>Предлагаем широкий выбор туров, отвечающих различным уровням мастерства и интересам. Мы также можем адаптировать маршруты к вашим конкретным потребностям и предпочтениям, чтобы вы получили индивидуальный опыт.</p>
+        </li>
+
+        <li class="advantages__item advantages__item--nature">
+          <h3>Бережное отношение к природе</h3>
+          <p>Уделяем первостепенное внимание охране окружающей среды и гарантируем, что туры оказывают минимальное воздействие на природную среду. Наша компания следует принципу «Не оставлять следов».</p>
+        </li>
+
+      </ul>
+
+      <div class="advantages__buttons swiper-buttons__wrapper">
+        <button class="swiper-button swiper-button--advantange-prev" type="button" aria-label="Предыдущий слайд"></button>
+        <button class="swiper-button swiper-button--advantange-next" type="button" aria-label="Следующий слайд"></button>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2 class="gallery__title section__title">Фотогалерея</h2>
+      <div class="gallery__text-wrapper title-wrapper">
+        <p>Добавляйте фото с хэштегом #лайфтур,
+          а также отмечайте нас на фото. Лучшие фотографии украсят этот раздел нашего сайта.</p>
+        <div class="gallery__buttons swiper-buttons__wrapper">
+          <button class="swiper-button swiper-button--gallery-prev" type="button" aria-label="Предыдущее фото"></button>
+          <button class="swiper-button swiper-button--gallery-next" type="button" aria-label="Следующее фото"></button>
+        </div>
+      </div>
+      <ul class="gallery__list">
+        <li class="gallery__item">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-1@1x.webp 1x, img/images/gallery/photo-1@2x.webp 2x" width="284" height="463">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-1@1x.webp 1x, img/images/gallery/photo-1@2x.webp 2x" width="253" height="418">
+            <source type="image/webp" srcset="img/images/gallery/photo-1@1x.webp 1x, img/images/gallery/photo-1@2x.webp 2x" width="158" height="266">
+            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-1@1x.jpg 1x, img/images/gallery/photo-1@2x.jpg 2x" width="284" height="463">
+            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-1@1x.jpg 1x, img/images/gallery/photo-1@2x.jpg 2x" width="253" height="418">
+            <img class="gallery__image" src="img/images/gallery/photo-1@1x.jpg" srcset="img/images/gallery/photo-1@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
+          </picture>
+        </li>
+
+        <li class="gallery__item">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-2@1x.webp 1x, img/images/gallery/photo-2@2x.webp 2x" width="284" height="228">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-2@1x.webp 1x, img/images/gallery/photo-2@2x.webp 2x" width="253" height="206">
+            <source type="image/webp" srcset="img/images/gallery/photo-2@1x.webp 1x, img/images/gallery/photo-2@2x.webp 2x" width="157" height="130">
+            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-2@1x.jpg 1x, img/images/gallery/photo-2@2x.jpg 2x" width="284" height="228">
+            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-2@1x.jpg 1x, img/images/gallery/photo-2@2x.jpg 2x" width="253" height="206">
+            <img class="gallery__image" src="img/images/gallery/photo-2@1x.jpg" srcset="img/images/gallery/photo-2@2x.jpg 2x" width="158" height="130" alt="Человек на вершине горы любуется видами" loading="lazy">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-3@1x.webp 1x, img/images/gallery/photo-3@2x.webp 2x" width="284" height="228">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-3@1x.webp 1x, img/images/gallery/photo-3@2x.webp 2x" width="253" height="204">
+            <source type="image/webp" srcset="img/images/gallery/photo-3@1x.webp 1x, img/images/gallery/photo-3@2x.webp 2x" width="157" height="129">
+            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-3@1x.jpg 1x, img/images/gallery/photo-3@2x.jpg 2x" width="284" height="228">
+            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-3@1x.jpg 1x, img/images/gallery/photo-3@2x.jpg 2x" width="253" height="204">
+            <img class="gallery__image" src="img/images/gallery/photo-3@1x.jpg" srcset="img/images/gallery/photo-3@2x.jpg 2x" width="157" height="129" alt="Человек на вершине горы любуется видами" loading="lazy">
+          </picture>
+        </li>
+
+        <li class="gallery__item">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-4@1x.webp 1x, img/images/gallery/photo-4@2x.webp 2x" width="284" height="463">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-4@1x.webp 1x, img/images/gallery/photo-4@2x.webp 2x" width="253" height="418">
+            <source type="image/webp" srcset="img/images/gallery/photo-4@1x.webp 1x, img/images/gallery/photo-4@2x.webp 2x" width="158" height="266">
+            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-4@1x.jpg 1x, img/images/gallery/photo-4@2x.jpg 2x" width="284" height="463">
+            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-4@1x.jpg 1x, img/images/gallery/photo-4@2x.jpg 2x" width="253" height="418">
+            <img class="gallery__image" src="img/images/gallery/photo-4@1x.jpg" srcset="img/images/gallery/photo-4@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
+          </picture>
+        </li>
+
+        <li class="gallery__item">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-5@1x.webp 1x, img/images/gallery/photo-5@2x.webp 2x" width="284" height="228">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-5@1x.webp 1x, img/images/gallery/photo-5@2x.webp 2x" width="253" height="206">
+            <source type="image/webp" srcset="img/images/gallery/photo-5@1x.webp 1x, img/images/gallery/photo-5@2x.webp 2x" width="157" height="130">
+            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-5@1x.jpg 1x, img/images/gallery/photo-5@2x.jpg 2x" width="284" height="228">
+            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-5@1x.jpg 1x, img/images/gallery/photo-5@2x.jpg 2x" width="253" height="206">
+            <img class="gallery__image" src="img/images/gallery/photo-5@1x.jpg" srcset="img/images/gallery/photo-5@2x.jpg 2x" width="158" height="130" alt="Человек на вершине горы любуется видами" loading="lazy">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-6@1x.webp 1x, img/images/gallery/photo-6@2x.webp 2x" width="284" height="228">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-6@1x.webp 1x, img/images/gallery/photo-6@2x.webp 2x" width="253" height="204">
+            <source type="image/webp" srcset="img/images/gallery/photo-6@1x.webp 1x, img/images/gallery/photo-6@2x.webp 2x" width="157" height="129">
+            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-6@1x.jpg 1x, img/images/gallery/photo-6@2x.jpg 2x" width="284" height="228">
+            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-6@1x.jpg 1x, img/images/gallery/photo-6@2x.jpg 2x" width="253" height="204">
+            <img class="gallery__image" src="img/images/gallery/photo-6@1x.jpg" srcset="img/images/gallery/photo-6@2x.jpg 2x" width="157" height="129" alt="Человек на вершине горы любуется видами" loading="lazy">
+          </picture>
+        </li>
+
+        <li class="gallery__item">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-7@1x.webp 1x, img/images/gallery/photo-7@2x.webp 2x" width="284" height="463">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-7@1x.webp 1x, img/images/gallery/photo-7@2x.webp 2x" width="253" height="418">
+            <source type="image/webp" srcset="img/images/gallery/photo-7@1x.webp 1x, img/images/gallery/photo-7@2x.webp 2x" width="158" height="266">
+            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-7@1x.jpg 1x, img/images/gallery/photo-7@2x.jpg 2x" width="284" height="463">
+            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-7@1x.jpg 1x, img/images/gallery/photo-7@2x.jpg 2x" width="253" height="418">
+            <img class="gallery__image" src="img/images/gallery/photo-7@1x.jpg" srcset="img/images/gallery/photo-7@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
+          </picture>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="form-section">
+      <h2>Остались вопросы?</h2>
+      <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="form__label">
+          <span class="form__label-text">Телефон</span>
+          <input class="form__field form__field--phone" type="tel" name="phone" id="phone" placeholder="+7 (000)-000-00-00" minlength="2" maxlength="14" required>
+        </label>
+        <label class="form__label">
+          <span class="form__label-text">Email</span>
+          <input class="form__field form__field--email" type="email" name="email" id="email" placeholder="email@email.ru" required>
+        </label>
+        <button class="form__button button--primary button" type="submit">Отправить</button>
+      </form>
+    </section>
+
+    <section class="contacts">
+      <h2 class="contacts__title section__title">Контакты</h2>
+      <div class="contacts__inner">
+        <div class="contacts__text-wrapper">
+          <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
+          <ul class="contacts__list">
+            <li class="contacts__item contacts__item--phone">
+              <h3 class="contacts__item-title">Телефон</h3>
+              <a class="contacts__item-desc contacts__item-link" href="tel:89837454545">+7 983 745-45-45</a>
+            </li>
+            <li class="contacts__item contacts__item--email">
+              <h3 class="contacts__item-title">Email</h3>
+              <a class="contacts__item-desc contacts__item-link" href="mailto:info@lifetour.com">info@lifetour.com</a>
+            </li>
+            <li class="contacts__item contacts__item--adres">
+              <h3 class="contacts__item-title">Email</h3>
+              <p class="contacts__item-desc">г. Москва, пр-т Мира, д. 14, офис 101</p>
+            </li>
+          </ul>
+        </div>
+        <picture>
+          <source media="(min-width: 1100px)" type="image/webp" srcset="img/images/map/map-desktop@1x.webp 1x, img/images/map/map-desktop@2x.webp 2x" width="600" height="324">
+          <source media="(min-width: 768px)" type="image/webp" srcset="img/images/map/map-tablet@1x.webp 1x, img/images/map/map-tablet@2x.webp 2x" width="768" height="340">
+          <source type="image/webp" srcset="img/images/map/map-tablet@1x.webp 1x, img/images/map/map-tablet@2x.webp 2x" width="320" height="343">
+          <source media="(min-width: 1100px)" type="image/jpg" srcset="img/images/map/map-desktop@1x.jpg 1x, img/images/map/map-desktop@2x.jpg 2x" width="600" height="324">
+          <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/map/map-tablet@1x.jpg 1x, img/images/map/map-tablet@2x.jpg 2x" width="768" height="340">
+          <img class="contacts__image" src="img/images/map/map-tablet@1x.jpg" srcset="img/images/map/map-tablet@2x.jpg 2x" width="320" height="343" alt="мы на карте: пр-т Мира, д. 14, офис 101" loading="lazy">
+        </picture>
+      </div>
+    </section>
   </main>
+  <footer class="footer">
+    <a class="footer__logo-link" href="#">
+      <img class="logo logo--footer" src="img/images/logo/logo-footer.svg" width="142" height="42" alt="Логотип нашего сайта">
+    </a>
+    <nav class="footer__nav">
+      <ul class="footer__nav-list">
+        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Туры</a></li>
+        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Обучение</a></li>
+        <li class="footer__nav-item"><a href="#" class="footer__nav-link">О нас</a></li>
+        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Отзывы</a></li>
+        <li class="footer__nav-item"><a href="#" class="footer__nav-link">фотографии</a></li>
+        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Контакты</a></li>
+      </ul>
+    </nav>
+    <ul class="footer__social social">
+      <li class="social__item">
+        <a class="social__link social__link--vk" href="#" aria-label="Мы в Контакте">
+        </a>
+      </li>
+
+      <li class="social__item">
+        <a class="social__link social__link--ok" href="#" aria-label="Мы в Одноклассниках">
+        </a>
+      </li>
+
+      <li class="social__item">
+        <a class="social__link social__link--reddit" href="#" aria-label="Наш Реддит">
+        </a>
+      </li>
+
+    </ul>
+
+    <a class="footer__copyright" href="#">Политика конфиденциальности</a>
+  </footer>
   <script type="module" src="js/main.js"></script>
 </body>
 
