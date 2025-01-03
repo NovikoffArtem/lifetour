@@ -53,12 +53,14 @@
 }
 
 .nav--closed .nav__toggle {
-  background-image: url("../../img/sprite/menu.svg");
+  
+  background-image: url("../__spritemap#sprite-menu-view");
   background-size: 26px;
 }
 
 .nav--opened .nav__toggle {
-  background-image: url("../../img/sprite/cross.svg");
+  background-image: url("../__spritemap#sprite-cross-view");
+  
 }
 
 .nav__phone {
