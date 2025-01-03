@@ -1,0 +1,39 @@
+.header {
+  background-color: $theme-color;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+
+.header__wrapper {
+  padding: 14px 15px 13px;
+  display: flex;
+  justify-content: space-between;
+
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 37px 120px;
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.header__logo {
+  display: inline-block;
+  text-align: right;
+  margin-top: 1px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 32px;
+    margin-top: 5px;
+  }
+}
+

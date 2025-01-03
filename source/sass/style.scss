@@ -2,28 +2,18 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "./common/mixins";
+@import "./common/fonts";
+@import "./common/variables";
+@import "./common/visually-hidden";
+@import "./common/button";
+@import "./common/global";
+@import "./blocks/page-body";
+@import "./blocks/header";
+@import "./blocks/nav";
+@import "./blocks/main";
+@import "./blocks/hero";
 
-
-body {
-  background-color: lightgrey;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.header__content-wrapper {
-  display: flex;
-  flex-direction: row;
-}
-
-.nav__list {
-  gap: 20px;
-  margin: 0;
-
-  // display: none;
-}
 
 .title-wrapper {
   display: flex;
@@ -56,19 +46,6 @@ dd {
   }
 }
 
-.hero__image {
-  width: 100%;
-  object-fit: cover;
-  min-height: 568px;
-  height: auto;
-  max-height: 1034px;
-
-
-  @media (width >= 1440px) {
-    height: 800px;
-    width: 1440px;
-  }
-}
 
 .about__image {
   // margin-bottom: 60px;
@@ -98,6 +75,11 @@ dd {
 // .swiper-buttons__wrapper {
 //   // display: none;
 // }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
 
 .gallery__image {
   object-fit: cover;
@@ -152,12 +134,3 @@ dd {
   column-count: 2;
 }
 
-.hero .swiper-pagination-bullet {
-  background: #ffffff;
-  opacity: 1;
-}
-
-.hero .swiper-pagination-bullet-active {
-  background: red;
-  opacity: 1;
-}

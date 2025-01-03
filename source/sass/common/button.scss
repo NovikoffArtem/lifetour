@@ -1,0 +1,19 @@
+.button {
+  font-family: $pr-font;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: $base-light;
+  text-align: center;
+  border: none;
+  padding: 22px 34px 19px;
+  text-decoration: none;
+  margin: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+
+.button--primary {
+  background-color: $theme-color;
+}

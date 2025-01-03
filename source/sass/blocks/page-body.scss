@@ -1,0 +1,18 @@
+.page-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  font-family: $pr-font;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $base-text-color;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

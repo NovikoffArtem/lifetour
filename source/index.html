@@ -31,46 +31,34 @@
 <body class="page-body">
   <!-- пример использования спрайта -->
   <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт"> -->
-  <header data-test="header">
+  <header class="header opened" data-test="header">
     <div class="header__wrapper">
-      <div class="header__content-wrapper">
+      <nav class="header__nav nav nav--closed">
+        <button class="nav__toggle button" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <a class="header__logo">
           <img class="logo logo--header" src="img/images/logo/logo.svg" alt="Логотип" width="142" height="42">
         </a>
-        <nav class="header__nav header__nav--closed nav">
-          <ul class="nav__list">
-            <button class="nav__toggle button" type="button">
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
-            <li class="nav__list-item"><a class="nav__link" href="#">Туры</a></li>
-            <li class="nav__list-item"><a class="nav__link" href="#">Обучение</a></li>
-            <li class="nav__list-item"><a class="nav__link" href="#">О нас</a></li>
-            <li class="nav__list-item"><a class="nav__link" href="#">Отзывы</a></li>
-            <li class="nav__list-item"><a class="nav__link" href="#">Фотографии</a></li>
-            <li class="nav__list-item"><a class="nav__link" href="#">Контакты</a></li>
-          </ul>
-        </nav>
-        <a href="tel:88000000000" class="header__phone">8 800 000-00-00</a>
-      </div>
+        <ul class="nav__list">
+          <li class="nav__list-item"><a class="nav__link" href="#">Туры</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#">Обучение</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#">О нас</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#">Отзывы</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#">Фотографии</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#">Контакты</a></li>
+        </ul>
+        <a href="tel:88000000000" class="nav__phone">8 800 000-00-00</a>
+      </nav>
     </div>
   </header>
-  <main>
+  <main class="main">
     <section class="hero" data-test="hero">
       <div class="hero__wrapper swiper">
 
         <div class="hero__swiper-wrapper swiper-wrapper">
 
           <div class="hero__item hero__item--caucasus swiper-slide">
-            <h1>Захватывающие вершины Кавказа</h1>
-            <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход
-              на вершину горы Чегет.</p>
-            <a class="hero__link button--primary button" href="#">Смотреть тур</a>
-            <div class="hero__bottom-wrapper">
-              <div class="hero__tour-option">
-                <span class="hero__option hero__option--duration">6 дней/5 ночей</span>
-                <span class="hero__option hero__option--level">Высокая сложность</span>
-              </div>
-            </div>
             <picture>
               <source media="(min-width: 940px)" type="image/webp" srcset="img/images/hero/hero-caucasus-desktop@1x.webp 1x, img/images/hero/hero-caucasus-desktop@2x.webp 2x" width="1440" height="800">
               <source media="(min-width: 768px)" type="image/webp" srcset="img/images/hero/hero-caucasus-tablet@1x.webp 1x, img/images/hero/hero-caucasus-tablet@2x.webp 2x" width="768" height="1034">
@@ -79,18 +67,19 @@
               <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/hero/hero-caucasus-tablet@1x.jpg 1x, img/images/hero/hero-caucasus-tablet@2x.jpg 2x" width="768" height="1034">
               <img class="hero__image" src="img/images/hero/hero-caucasus-tablet@1x.jpg" srcset="img/images/hero/hero-caucasus-tablet@2x.jpg 2x" width="320" height="568" alt="Захватывающие вершины Кавказа" loading="lazy">
             </picture>
+            <div class="hero__text-wrapper">
+              <h1>Захватывающие вершины Кавказа</h1>
+              <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход
+                на вершину горы Чегет.</p>
+              <a class="hero__link button--primary button" href="#">Смотреть тур</a>
+              <div class="hero__tour-option">
+                <span class="hero__option hero__option--duration">6 дней/5 ночей</span>
+                <span class="hero__option hero__option--level">Высокая сложность</span>
+              </div>
+            </div>
           </div>
 
           <div class="hero__item hero__item--kamch swiper-slide">
-            <h1>Невероятная природа Камчатки</h1>
-            <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
-            <a class="hero__link button--primary button" href="#">Смотреть тур</a>
-            <div class="hero__bottom-wrapper">
-              <div class="hero__tour-option">
-                <span class="hero__option hero__option--duration">9 дней/10 ночей</span>
-                <span class="hero__option hero__option--level">Средняя сложность</span>
-              </div>
-            </div>
             <picture>
               <source media="(min-width: 940px)" type="image/webp" srcset="img/images/hero/hero-kamch-desktop@1x.webp 1x, img/images/hero/hero-kamch-desktop@2x.webp 2x" width="1440" height="800">
               <source media="(min-width: 768px)" type="image/webp" srcset="img/images/hero/hero-kamch-tablet@1x.webp 1x, img/images/hero/hero-kamch-tablet@2x.webp 2x" width="768" height="1034">
@@ -99,18 +88,18 @@
               <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/hero/hero-kamch-tablet@1x.jpg 1x, img/images/hero/hero-kamch-tablet@2x.jpg 2x" width="768" height="1034">
               <img class="hero__image" src="img/images/hero/hero-kamch-tablet@1x.jpg" srcset="img/images/hero/hero-kamch-tablet@2x.jpg 2x" width="320" height="568" alt="Захватывающие вершины Кавказа" loading="lazy">
             </picture>
+            <div class="hero__text-wrapper">
+              <h1>Невероятная природа Камчатки</h1>
+              <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+              <a class="hero__link button--primary button" href="#">Смотреть тур</a>
+              <div class="hero__tour-option">
+                <span class="hero__option hero__option--duration">9 дней/10 ночей</span>
+                <span class="hero__option hero__option--level">Средняя сложность</span>
+              </div>
+            </div>
           </div>
 
           <div class="hero__item hero__item--altay swiper-slide">
-            <h1>Магические пейзажи Алтайского Края</h1>
-            <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
-            <a class="hero__link button--primary button" href="#">Смотреть тур</a>
-            <div class="hero__bottom-wrapper">
-              <div class="hero__tour-option">
-                <span class="hero__option hero__option--duration">8 дней/7 ночей</span>
-                <span class="hero__option hero__option--level">Лёгкая сложность</span>
-              </div>
-            </div>
             <picture>
               <source media="(min-width: 940px)" type="image/webp" srcset="img/images/hero/hero-altay-desktop@1x.webp 1x, img/images/hero/hero-altay-desktop@2x.webp 2x" width="1440" height="800">
               <source media="(min-width: 768px)" type="image/webp" srcset="img/images/hero/hero-altay-tablet@1x.webp 1x, img/images/hero/hero-altay-tablet@2x.webp 2x" width="768" height="1034">
@@ -119,6 +108,15 @@
               <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/hero/hero-altay-tablet@1x.jpg 1x, img/images/hero/hero-altay-tablet@2x.jpg 2x" width="768" height="1034">
               <img class="hero__image" src="img/images/hero/hero-altay-tablet@1x.jpg" srcset="img/images/hero/hero-altay-tablet@2x.jpg 2x" width="320" height="568" alt="Захватывающие вершины Кавказа" loading="lazy">
             </picture>
+            <div class="hero__text-wrapper">
+              <h1>Магические пейзажи Алтайского Края</h1>
+              <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
+              <a class="hero__link button--primary button" href="#">Смотреть тур</a>
+              <div class="hero__tour-option">
+                <span class="hero__option hero__option--duration">8 дней/7 ночей</span>
+                <span class="hero__option hero__option--level">Лёгкая сложность</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -129,8 +127,8 @@
     <section class="tours" data-test="tours">
       <div class="tours__wrapper content-wrapper">
         <div class="tours__title-wrapper title-wrapper">
-          <h2 class="tours__title section__title">Ближайшие туры</h2>
-          <div class="tours__buttons swiper-buttons__wrapper">
+          <h2 class="tours__title section-title">Ближайшие туры</h2>
+          <div class="tours__buttons swiper-buttons">
             <button class="swiper-button swiper-button--tours-prev" type="button" aria-label="Предыдущий тур"></button>
             <button class="swiper-button swiper-button--tours-next" type="button" aria-label="Следующий тур"></button>
           </div>
@@ -261,11 +259,11 @@
       </div>
     </section>
     <section class="training">
-      <h2 class="training__title section__title">Обучение</h2>
+      <h2 class="training__title section-title">Обучение</h2>
       <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
       <div class="training__trainers-title-wrapper title-wrapper">
         <h3 class="training__trainers-title">Наши инструкторы</h3>
-        <div class="training__buttons swiper-buttons__wrapper">
+        <div class="training__buttons swiper-buttons">
           <button class="swiper-button swiper-button--trainer-prev" type="button" aria-label="Предыдущий тренер"></button>
           <button class="swiper-button swiper-button--trainer-next" type="button" aria-label="Следующий тренер"></button>
         </div>
@@ -356,8 +354,8 @@
 
     <section class="reviews">
       <div class="reviews__title-wrapper title-wrapper">
-        <h3 class="reviews__title section__title">Отзывы</h3>
-        <div class="reviews__buttons swiper-buttons__wrapper">
+        <h3 class="reviews__title section-title">Отзывы</h3>
+        <div class="reviews__buttons swiper-buttons">
           <button class="swiper-button swiper-button--review-prev" type="button" aria-label="Предыдущий отзыв"></button>
           <button class="swiper-button swiper-button--review-next" type="button" aria-label="Следующий отзыв"></button>
         </div>
@@ -439,7 +437,7 @@
     </section>
 
     <section class="advantages">
-      <h2 class="advantages__title section__title">Преимущества</h2>
+      <h2 class="advantages__title section-title">Преимущества</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--safety">
           <h3>Безопасность</h3>
@@ -468,18 +466,18 @@
 
       </ul>
 
-      <div class="advantages__buttons swiper-buttons__wrapper">
+      <div class="advantages__buttons swiper-buttons">
         <button class="swiper-button swiper-button--advantange-prev" type="button" aria-label="Предыдущий слайд"></button>
         <button class="swiper-button swiper-button--advantange-next" type="button" aria-label="Следующий слайд"></button>
       </div>
     </section>
 
     <section class="gallery">
-      <h2 class="gallery__title section__title">Фотогалерея</h2>
+      <h2 class="gallery__title section-title">Фотогалерея</h2>
       <div class="gallery__text-wrapper title-wrapper">
         <p>Добавляйте фото с хэштегом #лайфтур,
           а также отмечайте нас на фото. Лучшие фотографии украсят этот раздел нашего сайта.</p>
-        <div class="gallery__buttons swiper-buttons__wrapper">
+        <div class="gallery__buttons swiper-buttons">
           <button class="swiper-button swiper-button--gallery-prev" type="button" aria-label="Предыдущее фото"></button>
           <button class="swiper-button swiper-button--gallery-next" type="button" aria-label="Следующее фото"></button>
         </div>
@@ -576,7 +574,7 @@
     </section>
 
     <section class="contacts">
-      <h2 class="contacts__title section__title">Контакты</h2>
+      <h2 class="contacts__title section-title">Контакты</h2>
       <div class="contacts__inner">
         <div class="contacts__text-wrapper">
           <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
