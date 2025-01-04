@@ -16,3 +16,26 @@
     line-height: 22px;
   }
 }
+
+
+.page-body--block {
+  overflow: hidden;
+
+  @media (min-width: $max-tablet-width) {
+    overflow: auto;
+  }
+}
+
+.page-body--block::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #2d383f;
+  opacity: 0.6;
+  position: absolute;
+  z-index: 1;
+
+  @media (min-width: $max-tablet-width) {
+    content: none;
+  }
+}

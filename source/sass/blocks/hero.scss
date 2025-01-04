@@ -1,9 +1,8 @@
 .hero {
+  // @media (min-width: $desktop-width) {
+  background-color: #526e8e;
 
-  @media (min-width: $desktop-width) {
-  background-color: #526e8e;  
-  }
-  
+  // }
 }
 
 .hero__wrapper {
@@ -28,47 +27,42 @@
   position: relative;
   min-height: 568px;
 
-
-  @media (width >= 400px) {
-    min-height: 580px;
-  }
-
   @media (width >= 500px) {
-    min-height: 700px;
+    min-height: 650px;
   }
 
   @media (width >= 550px) {
-    min-height: 750px;
+    min-height: 718px;
   }
 
   @media (width >= 575px) {
-    min-height: 775px;
+    min-height: 750px;
     padding-top: 250px;
   }
 
   @media (width >= 600px) {
-    min-height: 810px;
+    min-height: 785px;
   }
 
   @media (width >= 640px) {
-    min-height: 870px;
+    min-height: 840px;
   }
 
   @media (width >= 650px) {
-    min-height: 890px;
+    min-height: 850px;
   }
 
   @media (width >= 700px) {
-    min-height: 940px;
+    min-height: 920px;
     padding: 342px 45px 60px;
   }
 
   @media (width >= 725px) {
-    min-height: 980px;
+    min-height: 953px;
   }
 
   @media (width >= 750px) {
-    min-height: 1025px;
+    min-height: 985px;
   }
 
   @media (width >= 768px) {
@@ -267,6 +261,10 @@
 
 .hero__link {
   @media (min-width: $max-tablet-width) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-bottom: 133px;
   }
 }

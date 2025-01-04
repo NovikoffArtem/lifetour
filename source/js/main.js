@@ -26,3 +26,24 @@ export const setupJurySwiper = () => {
   }
 };
 setupJurySwiper();
+
+// бургер
+const headerButton = document.querySelector('.nav__toggle');
+const navMenu = document.querySelector('.nav');
+const body = document.querySelector('.page-body');
+const navLink = document.querySelectorAll('.nav__link');
+
+const changeMenu = () => {
+  navMenu.classList.toggle('nav--opened');
+  body.classList.toggle('page-body--block');
+  navLink.forEach((e) => e.addEventListener('click', () => {
+    if (navMenu.classList.contains('nav--opened')) {
+      navMenu.classList.remove('nav--opened');
+      body.classList.remove('page-body--block');
+    }
+  }));
+};
+
+
+headerButton.addEventListener('click', changeMenu);
+
