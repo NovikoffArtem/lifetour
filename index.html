@@ -25,13 +25,13 @@
   <link rel="preload" href="fonts/alumni-sans/AlumniSans-SemiBold.woff2" as="font" type="font/woff2"
     crossorigin="anonymous"> -->
 
-  <script type="module" crossorigin src="./assets/index-1IJ4fAS7.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-C8aWEqlE.css">
+  <script type="module" crossorigin src="./assets/index-uY2QnHM2.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CBniTgSD.css">
 </head>
 
 <body class="page-body">
   <!-- пример использования спрайта -->
-  <!-- <img src="/assets/spritemap.227ab4c8.svg#sprite-logo-view" alt="Это спрайт"> -->
+  <!-- <img src="/assets/spritemap.657de716.svg#sprite-logo-view" alt="Это спрайт"> -->
   <header class="header opened" data-test="header">
     <div class="header__wrapper">
       <nav class="header__nav nav">
@@ -43,12 +43,12 @@
         </a>
         <a href="tel:88000000000" class="nav__phone">8 800 000-00-00</a>
         <ul class="nav__list">
-          <li class="nav__list-item"><a class="nav__link" href="#">Туры</a></li>
-          <li class="nav__list-item"><a class="nav__link" href="#">Обучение</a></li>
-          <li class="nav__list-item"><a class="nav__link" href="#">О нас</a></li>
-          <li class="nav__list-item"><a class="nav__link" href="#">Отзывы</a></li>
-          <li class="nav__list-item"><a class="nav__link" href="#">Фотографии</a></li>
-          <li class="nav__list-item"><a class="nav__link" href="#">Контакты</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#tours">Туры</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#training">Обучение</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#about">О нас</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#reviews">Отзывы</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#gallery">Фотографии</a></li>
+          <li class="nav__list-item"><a class="nav__link" href="#contacts">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -125,219 +125,229 @@
         </div>
       </div>
     </section>
-    <section class="tours" data-test="tours">
+
+    <section class="tours" data-test="tours" id="tours">
       <div class="tours__wrapper content-wrapper">
         <div class="tours__title-wrapper title-wrapper">
           <h2 class="tours__title section-title">Ближайшие туры</h2>
           <div class="tours__buttons swiper-buttons">
-            <button class="swiper-button swiper-button--tours-prev" type="button" aria-label="Предыдущий тур"></button>
-            <button class="swiper-button swiper-button--tours-next" type="button" aria-label="Следующий тур"></button>
+            <button class="swiper-button swiper-button--prev swiper-button--tours-prev" type="button" aria-label="Предыдущий тур"></button>
+            <button class="swiper-button swiper-button--next swiper-button--tours-next" type="button" aria-label="Следующий тур"></button>
           </div>
         </div>
-        <ul class="tours__list">
-
-          <li class="tours__item card">
-            <picture>
-              <source type="image/webp" srcset="./assets/tours-caucasus-desktop@1x-B6_I2PSP.webp 1x, ./assets/tours-caucasus-desktop@2x-B3ESHtNh.webp 2x" width="380" height="416">
-              <img class="card__image" src="./assets/tours-caucasus-desktop@1x-CGkTJtaT.jpg" srcset="img/images/tours/tours-caucasus-mobile@2x.jpg 2x" width="380" height="416" alt="Лучи солнца пробиваются сквозь облака над великолепными горами" loading="lazy">
-            </picture>
-            <div class="card__top">
-              <div class="card__lacation"><span>Кавказ</span></div>
-              <div class="card__duration-wrapper">
-                <span class="card__duration card__duration--day">4 дня</span>
-                <span class="card__duration card__duration--night">3 ночи</span>
+        <div class="tours__swiper swiper">
+          <ul class="tours__list swiper-wrapper">
+            <li class="tours__item card swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="./assets/tours-caucasus-desktop@1x-B6_I2PSP.webp 1x, ./assets/tours-caucasus-desktop@2x-B3ESHtNh.webp 2x" width="380" height="416">
+                <img class="card__image" src="./assets/tours-caucasus-desktop@1x-CGkTJtaT.jpg" srcset="img/images/tours/tours-caucasus-mobile@2x.jpg 2x" width="380" height="416" alt="Лучи солнца пробиваются сквозь облака над великолепными горами" loading="lazy">
+              </picture>
+              <div class="card__text-wrapper">
+                <div class="card__top">
+                  <div class="card__option card__option--loc"><span>Кавказ</span></div>
+                  <div class="card__duration-wrapper">
+                    <span class="card__option card__option--day">4 дня</span>
+                    <span class="card__option card__option--night">3 ночи</span>
+                  </div>
+                </div>
+                <h3 class="card__title">Путешествие вокруг&nbsp;Эльбруса</h3>
+                <dl class="card__bottom">
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Сложность:</dt>
+                    <dd class="card__bottom-desc card__bottom-desc--level">
+                      <span class="card__level card__level--4"></span>
+                    </dd>
+                  </div>
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Даты набора:</dt>
+                    <dd class="card__bottom-desc">12.06–19.06</dd>
+                  </div>
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Группа:</dt>
+                    <dd class="card__bottom-desc">до 15 чел.</dd>
+                  </div>
+                </dl>
               </div>
-            </div>
-            <h2 class="card__title">Путешествие вокруг Эльбруса</h2>
-            <dl class="card__bottom">
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Сложность:</dt>
-                <dd class="card__bottom-desc"></dd>
+            </li>
+            <li class="tours__item card swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="./assets/tours-altay-desktop@1x-Bhfm93NY.webp 1x, ./assets/tours-altay-desktop@2x-CjJoDTZ5.webp 2x" width="380" height="416">
+                <img class="card__image" src="./assets/tours-altay-desktop@1x-CnB45n5Z.jpg" srcset="img/images/tours/tours-altay-mobile@2x.jpg 2x" width="380" height="416" alt="Вид на горы Алтая" loading="lazy">
+              </picture>
+              <div class="card__text-wrapper">
+                <div class="card__top">
+                  <div class="card__option card__option--loc"><span>Алтай</span></div>
+                  <div class="card__duration-wrapper">
+                    <span class="card__option card__option--day">14 дней</span>
+                    <span class="card__option card__option--night">13 ночей</span>
+                  </div>
+                </div>
+                <h3 class="card__title">Путь к подножию
+                  Белухи</h3>
+                <dl class="card__bottom">
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Сложность:</dt>
+                    <dd class="card__bottom-desc card__bottom-desc--level">
+                      <span class="card__level card__level--3"></span>
+                    </dd>
+                  </div>
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Даты набора:</dt>
+                    <dd class="card__bottom-desc">14.06–23.06</dd>
+                  </div>
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Группа:</dt>
+                    <dd class="card__bottom-desc">до 25 чел.</dd>
+                  </div>
+                </dl>
               </div>
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Даты набора:</dt>
-                <dd class="card__bottom-desc">12.06-19.06</dd>
+            </li>
+            <li class="tours__item card swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="./assets/tours-adygeya-desktop@1x-Cm0lv25_.webp 1x, ./assets/tours-adygeya-desktop@2x-jDbH6Ra8.webp 2x" width="380" height="416">
+                <img class="card__image" src="./assets/tours-adygeya-desktop@1x-CCIXEMCk.jpg" srcset="img/images/tours/tours-adygeya-mobile@2x.jpg 2x" width="380" height="416" alt="Вид на горы Адыгеи" loading="lazy">
+              </picture>
+              <div class="card__text-wrapper">
+                <div class="card__top">
+                  <div class="card__option card__option--loc"><span>Адыгея</span></div>
+                  <div class="card__duration-wrapper">
+                    <span class="card__option card__option--day">7 дней</span>
+                    <span class="card__option card__option--night">6 ночей</span>
+                  </div>
+                </div>
+                <h3 class="card__title">Через Фишт
+                  к Чёрному морю и обратно</h3>
+                <dl class="card__bottom">
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Сложность:</dt>
+                    <dd class="card__bottom-desc card__bottom-desc--level">
+                      <span class="card__level card__level--4"></span>
+                    </dd>
+                  </div>
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Даты набора:</dt>
+                    <dd class="card__bottom-desc">15.07–19.07</dd>
+                  </div>
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Группа:</dt>
+                    <dd class="card__bottom-desc">до 22 чел.</dd>
+                  </div>
+                </dl>
               </div>
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Группа:</dt>
-                <dd class="card__bottom-desc">до 15 чел.</dd>
+            </li>
+            <li class="tours__item card swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="./assets/tours-ural-desktop@1x-BwFMDAi0.webp 1x, ./assets/tours-ural-desktop@2x-CCtGeKEq.webp 2x" width="380" height="416">
+                <img class="card__image" src="./assets/tours-ural-desktop@1x-Cjhb0tOT.jpg" srcset="img/images/tours/tours-ural-mobile@2x.jpg 2x" width="380" height="416" alt="Вид на горы Урала" loading="lazy">
+              </picture>
+              <div class="card__text-wrapper">
+                <div class="card__top">
+                  <div class="card__option card__option--loc"><span>Урал</span></div>
+                  <div class="card__duration-wrapper">
+                    <span class="card__option card__option--day">9 дней</span>
+                    <span class="card__option card__option--night">10 ночей</span>
+                  </div>
+                </div>
+                <h3 class="card__title">Восхождение
+                  Манарага</h3>
+                <dl class="card__bottom">
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Сложность:</dt>
+                    <dd class="card__bottom-desc card__bottom-desc--level">
+                      <span class="card__level card__level--5"></span>
+                    </dd>
+                  </div>
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Даты набора:</dt>
+                    <dd class="card__bottom-desc">12.07–19.07</dd>
+                  </div>
+                  <div class="card__bottom-item">
+                    <dt class="card__bottom-title">Группа:</dt>
+                    <dd class="card__bottom-desc">до 7 чел.</dd>
+                  </div>
+                </dl>
               </div>
-            </dl>
-          </li>
-
-          <li class="tours__item card">
-            <picture>
-              <source type="image/webp" srcset="./assets/tours-altay-desktop@1x-Bhfm93NY.webp 1x, ./assets/tours-altay-desktop@2x-CjJoDTZ5.webp 2x" width="380" height="416">
-              <img class="card__image" src="./assets/tours-altay-desktop@1x-CnB45n5Z.jpg" srcset="img/images/tours/tours-altay-mobile@2x.jpg 2x" width="380" height="416" alt="Вид на горы Алтая" loading="lazy">
-            </picture>
-            <div class="card__top">
-              <div class="card__lacation"><span>Алтай</span></div>
-              <div class="card__duration-wrapper">
-                <span class="card__duration card__duration--day">14 дней</span>
-                <span class="card__duration card__duration--night">13 ночей</span>
-              </div>
-            </div>
-            <h2 class="card__title">Путь к подножию
-              Белухи</h2>
-            <dl class="card__bottom">
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Сложность:</dt>
-                <dd class="card__bottom-desc"></dd>
-              </div>
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Даты набора:</dt>
-                <dd class="card__bottom-desc">14.06-23.06</dd>
-              </div>
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Группа:</dt>
-                <dd class="card__bottom-desc">до 25 чел.</dd>
-              </div>
-            </dl>
-          </li>
-
-          <li class="tours__item card">
-            <picture>
-              <source type="image/webp" srcset="./assets/tours-adygeya-desktop@1x-Cm0lv25_.webp 1x, ./assets/tours-adygeya-desktop@2x-jDbH6Ra8.webp 2x" width="380" height="416">
-              <img class="card__image" src="./assets/tours-adygeya-desktop@1x-CCIXEMCk.jpg" srcset="img/images/tours/tours-adygeya-mobile@2x.jpg 2x" width="380" height="416" alt="Вид на горы Адыгеи" loading="lazy">
-            </picture>
-            <div class="card__top">
-              <div class="card__lacation"><span>Адыгея</span></div>
-              <div class="card__duration-wrapper">
-                <span class="card__duration card__duration--day">7 дней</span>
-                <span class="card__duration card__duration--night">6 ночей</span>
-              </div>
-            </div>
-            <h2 class="card__title">Через Фишт
-              к Чёрному морю и обратно</h2>
-            <dl class="card__bottom">
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Сложность:</dt>
-                <dd class="card__bottom-desc"></dd>
-              </div>
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Даты набора:</dt>
-                <dd class="card__bottom-desc">15.07-19.07</dd>
-              </div>
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Группа:</dt>
-                <dd class="card__bottom-desc">до 22 чел.</dd>
-              </div>
-            </dl>
-          </li>
-
-          <li class="tours__item card">
-            <picture>
-              <source type="image/webp" srcset="./assets/tours-ural-desktop@1x-BwFMDAi0.webp 1x, ./assets/tours-ural-desktop@2x-CCtGeKEq.webp 2x" width="380" height="416">
-              <img class="card__image" src="./assets/tours-ural-desktop@1x-Cjhb0tOT.jpg" srcset="img/images/tours/tours-ural-mobile@2x.jpg 2x" width="380" height="416" alt="Вид на горы Урала" loading="lazy">
-            </picture>
-            <div class="card__top">
-              <div class="card__lacation"><span>Урал</span></div>
-              <div class="card__duration-wrapper">
-                <span class="card__duration card__duration--day">9 дней</span>
-                <span class="card__duration card__duration--night">10 ночей</span>
-              </div>
-            </div>
-            <h2 class="card__title">Восхождение
-              Манарага</h2>
-            <dl class="card__bottom">
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Сложность:</dt>
-                <dd class="card__bottom-desc"></dd>
-              </div>
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Даты набора:</dt>
-                <dd class="card__bottom-desc">12.07-19.07</dd>
-              </div>
-              <div class="card__bottom-item">
-                <dt class="card__bottom-title">Группа:</dt>
-                <dd class="card__bottom-desc">до 7 чел.</dd>
-              </div>
-            </dl>
-          </li>
-
-        </ul>
-        <a class="tours__link" href="#">Показать все туры</a>
-      </div>
-    </section>
-    <section class="training">
-      <h2 class="training__title section-title">Обучение</h2>
-      <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
-      <div class="training__trainers-title-wrapper title-wrapper">
-        <h3 class="training__trainers-title">Наши инструкторы</h3>
-        <div class="training__buttons swiper-buttons">
-          <button class="swiper-button swiper-button--trainer-prev" type="button" aria-label="Предыдущий тренер"></button>
-          <button class="swiper-button swiper-button--trainer-next" type="button" aria-label="Следующий тренер"></button>
+            </li>
+          </ul>
         </div>
+        <a class="tours__link" href="#"><span>Показать все туры</span>
+          <svg width="9" height="14" aria-hidden="true" focusable="false">
+            <use href="/assets/spritemap.657de716.svg#sprite-arrow"></use>
+          </svg></a>
       </div>
-      <ul class="training__trainers-list trainers">
-
-        <li class="trainers-card">
-          <picture>
-            <source type="image/webp" srcset="./assets/trainers-prokofyev@1x-_pAy9Pzs.webp 1x, ./assets/trainers-prokofyev@2x-BX8pEHrg.webp 2x" width="260" height="200">
-            <img class="trainers-card__image" src="./assets/trainers-prokofyev@1x-8bfdH7D2.jpg" srcset="./assets/trainers-prokofyev@2x-AmvBEbnn.jpg 2x" width="260" height="200" alt="фотография Александра Прокофьева" loading="lazy">
-          </picture>
-          <h3>Александр Прокофьев</h3>
-          <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
-        </li>
-
-        <li class="trainers-card">
-          <picture>
-            <source type="image/webp" srcset="data:image/webp;base64,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 1x, ./assets/trainers-afinogenova@2x-BMtUPqD-.webp 2x" width="260" height="200">
-            <img class="trainers-card__image" src="./assets/trainers-afinogenova@1x-8N9KinIL.jpg" srcset="./assets/trainers-afinogenova@2x-kHBnqOPT.jpg 2x" width="260" height="200" alt="на фотографии Светлана Афиногенова" loading="lazy">
-          </picture>
-          <h3>Светлана Афиногенова</h3>
-          <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
-        </li>
-
-        <li class="trainers-card">
-          <picture>
-            <source type="image/webp" srcset="./assets/trainers-kolesnichenko@1x-DI-1aijV.webp 1x, ./assets/trainers-kolesnichenko@2x-CeGCNLBs.webp 2x" width="260" height="200">
-            <img class="trainers-card__image" src="./assets/trainers-kolesnichenko@1x-D8_gTXbo.jpg" srcset="./assets/trainers-kolesnichenko@2x-CfxR51MA.jpg 2x" width="260" height="200" alt="На фотографии Надежда Колесниченко" loading="lazy">
-          </picture>
-          <h3>Надежда Колесниченко</h3>
-          <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно и уверенно.</p>
-        </li>
-
-        <li class="trainers-card">
-          <picture>
-            <source type="image/webp" srcset="./assets/trainers-kaygorodov@1x-DZuLPtrF.webp 1x, ./assets/trainers-kaygorodov@2x-IdsnDHcd.webp 2x" width="260" height="200">
-            <img class="trainers-card__image" src="./assets/trainers-kaygorodov@1x-CyK-yqRn.jpg" srcset="./assets/trainers-kaygorodov@2x-BAHkWsZM.jpg 2x" width="260" height="200" alt="На фотографии Федор Кайгородов" loading="lazy">
-          </picture>
-          <h3>Федор Кайгородов</h3>
-          <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
-        </li>
-
-        <li class="trainers-card">
-          <picture>
-            <source type="image/webp" srcset="./assets/trainers-vasnetsov@1x-Ya-LRFYo.webp 1x, ./assets/trainers-vasnetsov@2x-WlcGHUl4.webp 2x" width="260" height="200">
-            <img class="trainers-card__image" src="./assets/trainers-vasnetsov@1x-BDUovUk5.jpg" srcset="./assets/trainers-vasnetsov@2x-B97zQrbK.jpg 2x" width="260" height="200" alt="На фотографии Даниэль Васнецов" loading="lazy">
-          </picture>
-          <h3>Даниэль Васнецов</h3>
-          <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
-        </li>
-
-      </ul>
-      <h3 class="training__process-title">Процесс обучения</h3>
-      <ul class="training__process-list trainig-process">
-
-        <li class="trainig-process__item trainig-process__item--map">
-          <p class="trainig-process__desc">Изучение спортивного туристского движения</p>
-        </li>
-
-        <li class="trainig-process__item trainig-process__item--boot">
-          <p class="trainig-process__desc">Подготовка и техническое снаряжение в походах</p>
-        </li>
-
-        <li class="trainig-process__item trainig-process__item--pine">
-          <p class="trainig-process__desc">Лекции по окружающей среде, экологии и гигиене</p>
-        </li>
-
-        <li class="trainig-process__item trainig-process__item--mountain">
-          <p class="trainig-process__desc">Разъяснение сложности горных препятствий</p>
-        </li>
-      </ul>
     </section>
-    <section class="about">
+
+    <section class="training" data-test="training" id="training">
+      <div class="content-wrapper">
+        <h2 class="training__title section-title">Обучение</h2>
+        <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+        <div class="training__trainers-title-wrapper title-wrapper">
+          <h3 class="training__trainers-title">Наши инструкторы</h3>
+          <div class="training__buttons swiper-buttons">
+            <button class="swiper-button swiper-button--prev swiper-button--trainer-prev" type="button" aria-label="Предыдущий тренер"></button>
+            <button class="swiper-button swiper-button--next swiper-button--trainer-next" type="button" aria-label="Следующий тренер"></button>
+          </div>
+        </div>
+        <ul class="training__trainers-list trainers">
+          <li class="trainers-card">
+            <picture>
+              <source type="image/webp" srcset="./assets/trainers-prokofyev@1x-_pAy9Pzs.webp 1x, ./assets/trainers-prokofyev@2x-BX8pEHrg.webp 2x" width="260" height="200">
+              <img class="trainers-card__image" src="./assets/trainers-prokofyev@1x-8bfdH7D2.jpg" srcset="./assets/trainers-prokofyev@2x-AmvBEbnn.jpg 2x" width="260" height="200" alt="фотография Александра Прокофьева" loading="lazy">
+            </picture>
+            <h4>Александр Прокофьев</h4>
+            <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
+          </li>
+          <li class="trainers-card">
+            <picture>
+              <source type="image/webp" srcset="data:image/webp;base64,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 1x, ./assets/trainers-afinogenova@2x-BMtUPqD-.webp 2x" width="260" height="200">
+              <img class="trainers-card__image" src="./assets/trainers-afinogenova@1x-8N9KinIL.jpg" srcset="./assets/trainers-afinogenova@2x-kHBnqOPT.jpg 2x" width="260" height="200" alt="на фотографии Светлана Афиногенова" loading="lazy">
+            </picture>
+            <h4>Светлана Афиногенова</h4>
+            <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
+          </li>
+          <li class="trainers-card">
+            <picture>
+              <source type="image/webp" srcset="./assets/trainers-kolesnichenko@1x-DI-1aijV.webp 1x, ./assets/trainers-kolesnichenko@2x-CeGCNLBs.webp 2x" width="260" height="200">
+              <img class="trainers-card__image" src="./assets/trainers-kolesnichenko@1x-D8_gTXbo.jpg" srcset="./assets/trainers-kolesnichenko@2x-CfxR51MA.jpg 2x" width="260" height="200" alt="На фотографии Надежда Колесниченко" loading="lazy">
+            </picture>
+            <h4>Надежда Колесниченко</h4>
+            <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно и уверенно.</p>
+          </li>
+          <li class="trainers-card">
+            <picture>
+              <source type="image/webp" srcset="./assets/trainers-kaygorodov@1x-DZuLPtrF.webp 1x, ./assets/trainers-kaygorodov@2x-IdsnDHcd.webp 2x" width="260" height="200">
+              <img class="trainers-card__image" src="./assets/trainers-kaygorodov@1x-CyK-yqRn.jpg" srcset="./assets/trainers-kaygorodov@2x-BAHkWsZM.jpg 2x" width="260" height="200" alt="На фотографии Федор Кайгородов" loading="lazy">
+            </picture>
+            <h4>Федор Кайгородов</h4>
+            <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
+          </li>
+          <li class="trainers-card">
+            <picture>
+              <source type="image/webp" srcset="./assets/trainers-vasnetsov@1x-Ya-LRFYo.webp 1x, ./assets/trainers-vasnetsov@2x-WlcGHUl4.webp 2x" width="260" height="200">
+              <img class="trainers-card__image" src="./assets/trainers-vasnetsov@1x-BDUovUk5.jpg" srcset="./assets/trainers-vasnetsov@2x-B97zQrbK.jpg 2x" width="260" height="200" alt="На фотографии Даниэль Васнецов" loading="lazy">
+            </picture>
+            <h4>Даниэль Васнецов</h4>
+            <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
+          </li>
+        </ul>
+        <h3 class="training__process-title">Процесс обучения</h3>
+        <ul class="training__process-list trainig-process">
+          <li class="trainig-process__item trainig-process__item--map">
+            <p class="trainig-process__desc">Изучение спортивного туристского движения</p>
+          </li>
+          <li class="trainig-process__item trainig-process__item--boot">
+            <p class="trainig-process__desc">Подготовка и техническое снаряжение в походах</p>
+          </li>
+          <li class="trainig-process__item trainig-process__item--pine">
+            <p class="trainig-process__desc">Лекции по окружающей среде, экологии и гигиене</p>
+          </li>
+          <li class="trainig-process__item trainig-process__item--mountain">
+            <p class="trainig-process__desc">Разъяснение сложности горных препятствий</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="about" data-test="about" id="about">
       <picture>
         <source media="(min-width: 1440px)" type="image/webp" srcset="./assets/about-desktop@1x-CbTTFXco.webp 1x, ./assets/about-desktop@2x-CUnD1wuW.webp 2x" width="660" height="498">
         <source media="(min-width: 768px)" type="image/webp" srcset="./assets/about-tablet@1x-CMuViPuj.webp 1x, ./assets/about-tablet@2x-CIZE__7-.webp 2x" width="542" height="350">
@@ -353,9 +363,9 @@
       <p>Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной компании.</p>
     </section>
 
-    <section class="reviews">
+    <section class="reviews" data-test="reviews" id="reviews">
       <div class="reviews__title-wrapper title-wrapper">
-        <h3 class="reviews__title section-title">Отзывы</h3>
+        <h2 class="reviews__title section-title">Отзывы</h2>
         <div class="reviews__buttons swiper-buttons">
           <button class="swiper-button swiper-button--review-prev" type="button" aria-label="Предыдущий отзыв"></button>
           <button class="swiper-button swiper-button--review-next" type="button" aria-label="Следующий отзыв"></button>
@@ -437,7 +447,7 @@
       </ul>
     </section>
 
-    <section class="advantages">
+    <section class="advantages" data-test="adv">
       <h2 class="advantages__title section-title">Преимущества</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--safety">
@@ -473,7 +483,7 @@
       </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" data-test="gallery" id="gallery">
       <h2 class="gallery__title section-title">Фотогалерея</h2>
       <div class="gallery__text-wrapper title-wrapper">
         <p>Добавляйте фото с хэштегом #лайфтур,
@@ -558,8 +568,8 @@
       </ul>
     </section>
 
-    <section class="form-section">
-      <h2>Остались вопросы?</h2>
+    <section class="form-section" data-test="form">
+      <h3>Остались вопросы?</h3>
       <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <label class="form__label">
@@ -574,7 +584,7 @@
       </form>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" data-test="footer" id="contacts">
       <h2 class="contacts__title section-title">Контакты</h2>
       <div class="contacts__inner">
         <div class="contacts__text-wrapper">
@@ -589,7 +599,7 @@
               <a class="contacts__item-desc contacts__item-link" href="mailto:info@lifetour.com">info@lifetour.com</a>
             </li>
             <li class="contacts__item contacts__item--adres">
-              <h3 class="contacts__item-title">Email</h3>
+              <h3 class="contacts__item-title">Адрес</h3>
               <p class="contacts__item-desc">г. Москва, пр-т Мира, д. 14, офис 101</p>
             </li>
           </ul>
@@ -611,12 +621,12 @@
     </a>
     <nav class="footer__nav">
       <ul class="footer__nav-list">
-        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Туры</a></li>
-        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Обучение</a></li>
-        <li class="footer__nav-item"><a href="#" class="footer__nav-link">О нас</a></li>
-        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Отзывы</a></li>
-        <li class="footer__nav-item"><a href="#" class="footer__nav-link">фотографии</a></li>
-        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Контакты</a></li>
+        <li class="footer__nav-item"><a href="#tours" class="footer__nav-link">Туры</a></li>
+        <li class="footer__nav-item"><a href="#training" class="footer__nav-link">Обучение</a></li>
+        <li class="footer__nav-item"><a href="#about" class="footer__nav-link">О нас</a></li>
+        <li class="footer__nav-item"><a href="#reviews" class="footer__nav-link">Отзывы</a></li>
+        <li class="footer__nav-item"><a href="#gallery" class="footer__nav-link">фотографии</a></li>
+        <li class="footer__nav-item"><a href="#contacts" class="footer__nav-link">Контакты</a></li>
       </ul>
     </nav>
     <ul class="footer__social social">
