@@ -1,9 +1,9 @@
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-export const setupJurySwiper = () => {
+export const setupHeroSwiper = () => {
   if(document.querySelector('.hero__wrapper')){
     new Swiper('.hero__wrapper', {
       loop: true,
@@ -25,7 +25,40 @@ export const setupJurySwiper = () => {
     });
   }
 };
-setupJurySwiper();
+setupHeroSwiper();
+
+export const setupToursSwiper = () => {
+  if(document.querySelector('.tours__swiper')){
+    new Swiper('.tours__swiper', {
+      loop: false,
+      allowTouchMove: true,
+
+      modules: [Navigation],
+      spaceBetween: 18,
+      navigation: {
+        nextEl: '.swiper-button--tours-next',
+        prevEl: '.swiper-button--tours-prev',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+
+      },
+
+    });
+  }
+};
+setupToursSwiper();
+
 
 // бургер
 const headerButton = document.querySelector('.nav__toggle');
@@ -47,3 +80,11 @@ const changeMenu = () => {
 
 headerButton.addEventListener('click', changeMenu);
 
+const sectionTitle = document.querySelectorAll('h2');
+
+const setAttrToTitle = () => {
+
+  sectionTitle.forEach((e) => e.setAttribute('data-title', `${e.textContent}`),
+  );
+};
+setAttrToTitle();

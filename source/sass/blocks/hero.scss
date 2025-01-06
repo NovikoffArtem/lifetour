@@ -1,8 +1,7 @@
 .hero {
-  // @media (min-width: $desktop-width) {
-  background-color: #526e8e;
-
-  // }
+  @media (min-width: $desktop-width) {
+    background-color: #526e8e;
+  }
 }
 
 .hero__wrapper {

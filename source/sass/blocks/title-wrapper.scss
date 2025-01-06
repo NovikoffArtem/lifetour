@@ -1,0 +1,11 @@
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 19px;
+  padding-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 7px;
+  }
+}

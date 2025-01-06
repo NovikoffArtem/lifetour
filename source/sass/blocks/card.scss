@@ -1,0 +1,237 @@
+.card {
+  position: relative;
+  min-height: 416px;
+
+  width: 290px;
+  color: $base-light;
+  padding: 30px 20px 29px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  @media (min-width: $tablet-width) {
+    width: 330px;
+    padding-bottom: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 380px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 290px;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 22.3%, rgba(0, 0, 0, 0) 60.32%);
+    inset: 0;
+    margin: auto;
+
+    @media (min-width: $tablet-width) {
+      min-width: 330px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 380px;
+    }
+  }
+}
+
+.card__text-wrapper {
+  z-index: 2;
+  position: relative;
+}
+
+.card__top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-weight: 500;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.card__option {
+  display: inline-block;
+  padding: 8px 1px 5px 32px;
+  background-repeat: no-repeat;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.card__option--loc {
+  background-color: $theme-color;
+  padding: 8px 13px 8px 34px;
+  background-image: url("../__spritemap#sprite-tours-pin-view");
+  background-position: 16px 8px;
+  background-size: 9px 12px;
+  margin-bottom: 1px;
+}
+
+.card__duration-wrapper {
+  display: flex;
+  gap: 13px;
+}
+
+.card__option--day {
+  background-image: url("../__spritemap#sprite-day-view");
+  background-position: 0 4px;
+  background-size: 20px 20px;
+}
+
+.card__option--night {
+  background-image: url("../__spritemap#sprite-moon-view");
+  background-size: 17px 17px;
+  background-position: 2px 5px;
+}
+
+.card__title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 29px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 300px;
+  }
+
+  &::after {
+    content: "";
+    width: 80px;
+    height: 1px;
+    background-color: $base-light;
+    opacity: 0.2;
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+  }
+}
+
+.card__bottom {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  margin: 0;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    gap: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 52px;
+  }
+}
+
+.card__bottom-title {
+  font-weight: 300;
+  min-width: 83px;
+  font-size: 12px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.card__bottom-desc {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.card__bottom-desc--level {
+  width: 84px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 3px;
+  }
+}
+
+.card__level {
+  display: block;
+  height: 16px;
+  z-index: 50;
+  position: relative;
+  background-image: url("../__spritemap#sprite-star-fill-view");
+  background-size: 17px 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 2px;
+    height: 16px;
+    background-size: 17px 15px;
+  }
+}
+
+.card__level::after {
+  content: "";
+  position: absolute;
+  width: 84px;
+  height: 15px;
+  background-image: url("../__spritemap#sprite-star-view");
+  background-size: 17px 15px;
+  z-index: 5;
+}
+
+.card__level--0 {
+  width: 0;
+}
+
+.card__level--1 {
+  width: 35px;
+}
+
+.card__level--2 {
+  width: 18px;
+}
+
+.card__level--3 {
+  width: 50px;
+}
+
+.card__level--4 {
+  width: 65px;
+}
+
+.card__level--5 {
+  width: 84px;
+}
+
+.card__image {
+  width: 290px;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  height: 416px;
+
+  @media (min-width: $tablet-width) {
+    width: 330px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 380px;
+  }
+}
+
+.tours .swiper-slide {
+  display: flex;
+  max-width: 290px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 330px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 380px;
+  }
+}

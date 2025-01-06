@@ -1,0 +1,36 @@
+.swiper-buttons {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 4px;
+  }
+}
+
+.swiper-button {
+  width: 37px;
+  height: 35px;
+  border: none;
+  background-color: $theme-color;
+  position: relative;
+
+  &:disabled {
+    background-color: $disabled;
+  }
+}
+
+.swiper-button::after {
+  content: "";
+  width: 18px;
+  height: 10px;
+  mask-image: url("../__spritemap#sprite-left-view");
+  mask-repeat: no-repeat;
+  inset: 0;
+  margin: auto;
+  background-color: $base-light;
+  position: absolute;
+}
+
+.swiper-button--next {
+  transform: rotate(180deg);
+}

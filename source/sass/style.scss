@@ -6,6 +6,8 @@
 @import "./common/fonts";
 @import "./common/variables";
 @import "./common/visually-hidden";
+@import "./blocks/section-title";
+@import "./blocks/content-wrapper";
 @import "./common/button";
 @import "./common/global";
 @import "./blocks/page-body";
@@ -13,38 +15,10 @@
 @import "./blocks/nav";
 @import "./blocks/main";
 @import "./blocks/hero";
-
-
-.title-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.card__bottom {
-  display: flex;
-}
-
-.card__bottom-item {
-  display: flex;
-  flex-direction: column;
-}
-
-dd {
-  margin: 0;
-}
-
-.card__image {
-  width: 290px;
-  object-fit: cover;
-
-  @media (width >= 768px) {
-    min-width: 330px;
-  }
-
-  @media (width >= 1440px) {
-    width: 380px;
-  }
-}
+@import "./blocks/tours";
+@import "./blocks/title-wrapper";
+@import "./blocks/swiper-buttons";
+@import "./blocks/card";
 
 
 .about__image {
@@ -71,10 +45,6 @@ dd {
 .reviews__author-name {
   display: block;
 }
-
-// .swiper-buttons__wrapper {
-//   // display: none;
-// }
 
 ul {
   list-style: none;
