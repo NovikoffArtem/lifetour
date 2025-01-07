@@ -1,0 +1,111 @@
+.trainers {
+  max-width: 290px;
+
+  @media (min-width: $min-tablet-width) {
+    max-width: 450px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 695px;
+  }
+
+  @media (min-width: $med-tab-width-2) {
+    max-width: 930px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+  }
+}
+
+.trainers__list {
+  @include list-reset;
+
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.trainers__list .swiper-slide {
+  max-width: 290px;
+
+  @media (min-width: $min-tablet-width) {
+    max-width: 213px;
+  }
+
+  @media (min-width: $med-tab-width) {
+    max-width: 285px;
+  }
+}
+
+.trainers__card {
+  padding: 14px;
+  border: 1px solid $border-color;
+  min-height: 356px;
+
+  @media (min-width: $min-tablet-width) {
+    min-height: 388px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 356px;
+  }
+}
+
+.trainers__card-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.trainers__card h4 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  width: 50%;
+}
+
+.trainers__card p {
+  margin: 0;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 12px;
+  }
+}
+
+.trainers__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  border: 1px solid $border-icon;
+}
+
+.trainers__link::after {
+  content: "";
+  width: 14px;
+  height: 8px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  mask-image: url("../__spritemap#sprite-vk-view");
+  background-color: $base-text-color;
+}
+
+.trainers__card-image {
+  margin-bottom: 15px;
+  display: block;
+  height: 200px;
+  object-fit: cover;
+  width: 260px;
+
+
+  @media (min-width: $min-tablet-width) {
+    max-width: 182px;
+  }
+
+  @media (min-width: $med-tab-width-2) {
+    max-width: 255px;
+  }
+}

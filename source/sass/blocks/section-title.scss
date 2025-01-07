@@ -8,6 +8,10 @@
   @media (min-width: $tablet-width) {
     font-size: 25px;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+  }
 }
 
 .section-title::after {
@@ -23,5 +27,9 @@
   @media (min-width: $tablet-width) {
     font-size: 40px;
     width: 600px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 55px;
   }
 }

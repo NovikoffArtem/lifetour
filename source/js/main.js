@@ -27,6 +27,40 @@ export const setupHeroSwiper = () => {
 };
 setupHeroSwiper();
 
+export const setupTrainingSwiper = () => {
+  if(document.querySelector('.trainers')){
+    new Swiper('.trainers', {
+      loop: false,
+      allowTouchMove: true,
+      modules: [Navigation],
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button--trainer-next',
+        prevEl: '.swiper-button--trainer-prev',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          initialSlide: 2,
+        },
+        550: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1440: {
+          slidesPerView: 4,
+          allowTouchMove: false,
+        },
+      },
+
+    });
+  }
+};
+setupTrainingSwiper();
+
+
 export const setupToursSwiper = () => {
   if(document.querySelector('.tours__swiper')){
     new Swiper('.tours__swiper', {
@@ -47,7 +81,7 @@ export const setupToursSwiper = () => {
           slidesPerView: 2,
         },
 
-        1440: {
+        1150: {
           slidesPerView: 3,
           spaceBetween: 30,
         },
@@ -58,7 +92,6 @@ export const setupToursSwiper = () => {
   }
 };
 setupToursSwiper();
-
 
 // бургер
 const headerButton = document.querySelector('.nav__toggle');

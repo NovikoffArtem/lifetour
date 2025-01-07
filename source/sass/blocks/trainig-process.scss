@@ -1,0 +1,161 @@
+.training-process__title {
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 22px;
+
+  @media (min-width: $min-tablet-width) {
+    font-size: 18px;
+    margin-bottom: 100px;
+  }
+}
+
+.training-process__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 2px;
+    height: calc(100% - 30px);
+    position: absolute;
+    background-color: $theme-color;
+    top: 15px;
+    left: 6px;
+
+    @media (min-width: $min-tablet-width) {
+      content: none;
+    }
+
+    @media (min-width: $med-tab-width-3) {
+      content: "";
+      height: 2px;
+      width: calc(100% - 130px);
+      top: auto;
+      left: 20px;
+      bottom: 0;
+    }
+  }
+
+  @media (min-width: $min-tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 104px;
+    column-gap: 134px;
+  }
+
+  @media (min-width: $med-tab-width-3) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.trainig-process__item {
+  padding-left: 63px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  max-width: 260px;
+
+  @media (min-width: $med-tab-width-3) {
+    width: 240px;
+  }
+
+  &::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $theme-color;
+    position: absolute;
+    left: 0;
+    top: calc(50% + 2px);
+    transform: translateY(-50%);
+
+    @media (min-width: $min-tablet-width) {
+      content: none;
+    }
+
+    @media (min-width: $med-tab-width-3) {
+      content: "";
+      top: auto;
+      left: 10px;
+      bottom: -13px;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $min-tablet-width) {
+    padding-left: 35px;
+  }
+}
+
+.trainig-process__item--boot {
+  grid-column: 1/2;
+}
+
+.trainig-process__item--map::after {
+  background-image: url("../__spritemap#sprite-process-map-view");
+  left: 29px;
+  top: 2px;
+
+  @media (min-width: $min-tablet-width) {
+    left: 0;
+  }
+}
+
+.trainig-process__item--boot::after {
+  background-image: url("../__spritemap#sprite-process-boot-view");
+  height: 21px;
+  top: 4px;
+  left: 30px;
+
+  @media (min-width: $min-tablet-width) {
+    left: 0;
+  }
+}
+
+.trainig-process__item--pine::after {
+  background-image: url("../__spritemap#sprite-process-pine-view");
+  top: 2px;
+  left: 29px;
+
+  @media (min-width: $min-tablet-width) {
+    left: 0;
+  }
+}
+
+.trainig-process__item--mountain {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: start;
+}
+
+.trainig-process__item--mountain::after {
+  // background-image: url("../__spritemap#sprite-process-mountain-view"); не работает со спрайтом, поэтому добавил через файл
+
+  background-image: url("../../img/sprite/process-mountain.svg");
+  top: 2px;
+  left: 29px;
+
+  @media (min-width: $min-tablet-width) {
+    left: 0;
+  }
+}
+
+.trainig-process__desc {
+  margin: 0;
+}

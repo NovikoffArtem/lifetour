@@ -1,0 +1,30 @@
+.training__wrapper {
+  padding-top: 37px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
+}
+
+.training__title {
+  margin-bottom: 33px;
+}
+
+.training__title + p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.training__trainers-title {
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+}

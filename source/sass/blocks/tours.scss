@@ -1,16 +1,11 @@
 .tours__wrapper {
-  background-image:
-    image-set(
-      url("../img/images/body/body-bg-mobile@1x.webp") type("image/webp") 1x,
-      url("../img/images/body/body-bg-mobile@2x.webp") type("image/webp") 2x,
-      url("../img/images/body/body-bg-mobile@1x.png") type("image/png") 1x,
-      url("../img/images/body/body-bg-mobile@2x.png") type("image/png") 2x);
-  background-repeat: no-repeat;
-  background-position: right 0 bottom -20px;
-
   @media (min-width: $tablet-width) {
-    background: none;
     padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 108px;
+    background-color: red;
   }
 }
 
@@ -18,15 +13,16 @@
   width: 290px;
 
   @media (width >= 680px) {
-    width: 630px;
+    width: 610px;
   }
 
   @media (min-width: $tablet-width) {
-    width: 678px;
+    width: 690px;
   }
 
-  @media (width >= 1300px) {
-    width: 1040px;
+
+  @media (min-width: $max-tablet-width) {
+    width: 1030px;
   }
 
   @media (min-width: $desktop-width) {
@@ -40,6 +36,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 18px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 46px;
+  }
 }
 
 .tours__list {
@@ -49,6 +49,10 @@
   flex-direction: row;
   margin: 0 auto;
   margin-bottom: 35px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
+  }
 }
 
 .tours__link {
@@ -67,4 +71,3 @@
     font-size: 16px;
   }
 }
-

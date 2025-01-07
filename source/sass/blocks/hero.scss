@@ -111,7 +111,7 @@
   }
 }
 
-.hero__text-wrapper h1 {
+.hero__text-wrapper h2 {
   font-size: 26px;
   line-height: 1;
   font-weight: 800;
@@ -338,8 +338,7 @@
   max-height: 1034px;
 
 
-  @media (width >= 940px) {
+  @media (min-width: $med-tab-width) {
     height: 800px;
   }
 }
-

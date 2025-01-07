@@ -15,10 +15,14 @@
 @import "./blocks/nav";
 @import "./blocks/main";
 @import "./blocks/hero";
+@import "./blocks/tours-training-bg";
 @import "./blocks/tours";
 @import "./blocks/title-wrapper";
 @import "./blocks/swiper-buttons";
 @import "./blocks/card";
+@import "./blocks/training";
+@import "./blocks/trainers";
+@import "./blocks/trainig-process";
 
 
 .about__image {
@@ -103,4 +107,3 @@ ul {
 .footer__nav-list {
   column-count: 2;
 }
-
