@@ -1,7 +1,5 @@
 .hero {
-  @media (min-width: $desktop-width) {
-    background-color: $backup-color;
-  }
+  background: linear-gradient(0deg, #342d25 6%, $backup-color 48%);
 }
 
 .hero__wrapper {
