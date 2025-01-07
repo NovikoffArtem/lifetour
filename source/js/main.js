@@ -93,6 +93,38 @@ export const setupToursSwiper = () => {
 };
 setupToursSwiper();
 
+export const setupReviewsSwiper = () => {
+  if(document.querySelector('.reviews__swiper')){
+    new Swiper('.reviews__swiper', {
+      loop: false,
+      allowTouchMove: true,
+
+      modules: [Navigation],
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button--review-next',
+        prevEl: '.swiper-button--review-prev',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+
+        1150: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+
+      },
+
+    });
+  }
+};
+setupReviewsSwiper();
+
 // бургер
 const headerButton = document.querySelector('.nav__toggle');
 const navMenu = document.querySelector('.nav');
