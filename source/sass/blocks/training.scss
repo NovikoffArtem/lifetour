@@ -4,6 +4,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 60px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 63px;
+  }
 }
 
 .training__title {
@@ -18,13 +22,36 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70%;
+    margin-bottom: 37px;
+  }
+}
+
+.training__trainers-title-wrapper {
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 20px;
+    margin-bottom: 9px;
   }
 }
 
 .training__trainers-title {
-  margin-bottom: 5px;
+  @media (min-width: $desktop-width) {
+    padding-top: 4px;
+  }
+}
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 31px;
+.training__buttons {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 4px;
   }
 }

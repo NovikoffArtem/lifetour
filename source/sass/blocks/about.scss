@@ -1,0 +1,134 @@
+.about__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding-block: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 120px 100px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+
+.about__image {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+  object-position: -63px -45px;
+  display: block;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    width: 542px;
+    height: 350px;
+    object-position: 0;
+    position: absolute;
+    z-index: -1;
+    top: calc(50% - 41px);
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 660px;
+    height: 498px;
+    top: calc(50% - 6px);
+  }
+}
+
+.about__text-wrapper {
+  padding: 20px 15px;
+
+  @media (min-width: $tablet-width) {
+    width: calc(41% + 3px);
+    padding: 20px 49px 10px 0;
+  }
+
+  @media (min-width: $med-tab-width) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 45px 60px 60px 0;
+  }
+}
+
+.about__text-wrapper h2 {
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 800;
+  position: relative;
+  margin: 0;
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 25px;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+    margin-bottom: 59px;
+  }
+}
+
+.about__text-wrapper h2::after {
+  content: attr(data-title);
+  position: absolute;
+  font-size: 26px;
+  line-height: 1;
+  opacity: 0.03;
+  top: -16px;
+  left: 0;
+  width: 300px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 55px;
+    top: auto;
+    bottom: 20px;
+  }
+}
+
+.about__text-wrapper h3 {
+  font-size: 16px;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+}
+
+.about__text-wrapper p {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

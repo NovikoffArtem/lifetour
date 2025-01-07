@@ -1,22 +1,16 @@
 .card {
   position: relative;
-  min-height: 416px;
-
-  width: 290px;
   color: $base-light;
   padding: 30px 20px 29px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+  background-color: $backup-color-card;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   @media (min-width: $tablet-width) {
-    width: 330px;
     padding-bottom: 27px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 380px;
   }
 
   &::after {
@@ -38,20 +32,46 @@
   }
 }
 
+.tours .swiper-slide {
+  display: flex;
+  max-width: 290px;
+  height: 416px;
+
+
+  @media (min-width: $tablet-width) {
+    max-width: 330px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 380px;
+  }
+}
+
 .card__text-wrapper {
   z-index: 2;
   position: relative;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .card__top {
   display: flex;
-  justify-content: space-between;
+
   flex-wrap: wrap;
   font-weight: 500;
   margin-bottom: 15px;
+  gap: 5px;
+  width: 265px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 15px;
+    width: 290px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 340px;
   }
 }
 
@@ -212,7 +232,8 @@
   position: absolute;
   inset: 0;
   margin: auto;
-  height: 416px;
+  height: 100%;
+  z-index: -2;
 
   @media (min-width: $tablet-width) {
     width: 330px;
@@ -220,18 +241,5 @@
 
   @media (min-width: $desktop-width) {
     width: 380px;
-  }
-}
-
-.tours .swiper-slide {
-  display: flex;
-  max-width: 290px;
-
-  @media (min-width: $tablet-width) {
-    max-width: 330px;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 380px;
   }
 }

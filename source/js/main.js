@@ -121,3 +121,9 @@ const setAttrToTitle = () => {
   );
 };
 setAttrToTitle();
+
+
+// const addClassToTitle = () => {
+//   document.querySelector('.about h2').classList.add('section-title');
+// };
+// addClassToTitle();

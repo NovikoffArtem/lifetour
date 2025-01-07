@@ -11,10 +11,6 @@
 .tours__swiper {
   width: 290px;
 
-  @media (width >= 680px) {
-    width: 610px;
-  }
-
   @media (min-width: $tablet-width) {
     width: 690px;
   }
@@ -41,6 +37,16 @@
   }
 }
 
+.tours__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
 .tours__list {
   @include list-reset;
 
@@ -48,6 +54,10 @@
   flex-direction: row;
   margin: 0 auto;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 36px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 65px;
@@ -68,5 +78,6 @@
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
+    padding-left: 2px;
   }
 }

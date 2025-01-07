@@ -1,6 +1,6 @@
 .hero {
   @media (min-width: $desktop-width) {
-    background-color: #526e8e;
+    background-color: $backup-color;
   }
 }
 

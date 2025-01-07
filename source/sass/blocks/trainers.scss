@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $med-tab-width-2) {
-    max-width: 930px;
+    max-width: 910px;
   }
 
   @media (min-width: $desktop-width) {
@@ -23,32 +23,31 @@
 
   display: flex;
   margin-bottom: 10px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 38px;
+  }
 }
 
 .trainers__list .swiper-slide {
   max-width: 290px;
+  height: 356px;
+  overflow-y: auto;
 
   @media (min-width: $min-tablet-width) {
     max-width: 213px;
+    height: 388px;
   }
 
   @media (min-width: $med-tab-width) {
     max-width: 285px;
+    height: 356px;
   }
 }
 
 .trainers__card {
   padding: 14px;
   border: 1px solid $border-color;
-  min-height: 356px;
-
-  @media (min-width: $min-tablet-width) {
-    min-height: 388px;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: 356px;
-  }
 }
 
 .trainers__card-title-wrapper {

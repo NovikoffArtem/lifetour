@@ -23,27 +23,7 @@
 @import "./blocks/training";
 @import "./blocks/trainers";
 @import "./blocks/trainig-process";
-
-
-.about__image {
-  // margin-bottom: 60px;
-  width: 100%;
-  object-fit: cover;
-  height: 400px;
-  object-position: -60px;
-  display: block;
-
-  @media (width >= 768px) {
-    width: 542px;
-    height: 350px;
-    object-position: 0;
-  }
-
-  @media (width >= 1440px) {
-    width: 660px;
-    height: 498px;
-  }
-}
+@import "./blocks/about";
 
 
 .reviews__author-name {
