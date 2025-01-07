@@ -1,0 +1,141 @@
+.reviews__wrapper {
+  padding: 20px 0 0;
+
+  @media (min-width: $min-tablet-width-2) {
+    padding: 40px 0 0;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 127px 0 0;
+    padding-left: 105px;
+  }
+}
+
+.reviews__title-wrapper {
+  padding-inline: 15px;
+  padding-block: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 45px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 120px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+}
+
+.reviews__buttons {
+  padding-top: 4px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 2px;
+  }
+}
+
+.reviews__title::after {
+  bottom: 20px;
+  top: auto;
+}
+
+.reviews .swiper {
+  margin-right: 0;
+  margin-left: -30px;
+
+  @media (width >= $middle-mobile-width) {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 10px;
+  }
+}
+
+.reviews__image {
+  margin-bottom: 19px;
+  display: block;
+}
+
+
+.reviews .swiper-slide {
+  max-width: 290px;
+  height: 484px;
+  padding: 20px 19px 15px;
+  padding-right: 21px;
+  box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
+  border: 1px solid $base-light;
+  overflow-y: auto;
+
+  @media (min-width: $min-tablet-width-2) {
+    display: flex;
+    gap: 30px;
+    max-width: 565px;
+    height: 277px;
+    padding: 17px 30px 20px 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 30px;
+    max-width: 700px;
+    height: 293px;
+    padding: 17px 30px 20px 19px;
+  }
+}
+
+.reviews__list {
+  @include list-reset;
+
+  padding: 15px;
+}
+
+.reviews p {
+  margin: 0;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 4px;
+    margin-bottom: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 0;
+  }
+}
+
+
+.reviews__text-content p:nth-child(2) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 6px;
+  }
+}
+
+.reviews__author-name {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+  padding-block: 5px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 13px;
+    padding: 0;
+  }
+}
+
+.reviews__author-desc {
+  @media (min-width: $tablet-width) {
+    font-size: 12px;
+  }
+}

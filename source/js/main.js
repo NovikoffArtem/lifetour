@@ -100,22 +100,33 @@ export const setupReviewsSwiper = () => {
       allowTouchMove: true,
 
       modules: [Navigation],
-      spaceBetween: 20,
+      spaceBetween: 15,
+      slidesPerView: 'auto',
       navigation: {
         nextEl: '.swiper-button--review-next',
         prevEl: '.swiper-button--review-prev',
       },
+
       breakpoints: {
         320: {
-          slidesPerView: 1,
+          centeredSlides: true,
+        },
+        450: {
+          centeredSlides: false,
+          spaceBetween: 30,
         },
         768: {
-          slidesPerView: 2,
+          spaceBetween: 30,
+          centeredSlides: false,
         },
 
         1150: {
-          slidesPerView: 3,
+          // slidesPerView: 3,
           spaceBetween: 30,
+        },
+        1440: {
+          // slidesPerView: 3,
+          spaceBetween: 120,
         },
 
       },
