@@ -1,0 +1,129 @@
+.advantages__title {
+  padding-top: 17px;
+  text-align: center;
+  margin-bottom: 36px;
+
+  @media (min-width: $min-tablet-width-2) {
+    padding-top: 20px;
+    margin-bottom: 59px;
+  }
+}
+
+.advantages__title::after {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  top: auto;
+
+  @media (min-width: $min-tablet-width-2) {
+    bottom: 0;
+  }
+}
+
+.advantages__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+
+  @media (min-width: $min-tablet-width-2) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.advantages__item {
+  border: 1px solid $border-color;
+  padding: 81px 9px 15px;
+  width: 290px;
+  min-height: 256px;
+  background-repeat: no-repeat;
+  background-size: 42px 42px;
+  background-position: 50% 19px;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    min-height: 340px;
+    background-size: 48px 48px;
+    padding: 104px 19px 30px;
+    background-position: 50% 30px;
+  }
+}
+
+.advantages__item--safety {
+  background-image: url("../__spritemap#sprite-advantages-shield-view");
+  min-height: 240px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 340px;
+  }
+}
+
+
+.advantages__item--expertise {
+  background-image: url("../__spritemap#sprite-advantages-crown-view");
+  background-position: 50% 18px;
+  padding-top: 80px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 103px;
+    background-position: 50% 29px;
+  }
+}
+
+.advantages__item--equipment {
+  background-image: url("../__spritemap#sprite-advantages-boot-view");
+
+  @media (min-width: $tablet-width) {
+    padding-top: 102px;
+    background-position: 50% 28px;
+  }
+}
+
+.advantages__item--routes {
+  background-image: url("../__spritemap#sprite-advantages-route-view");
+  background-position: 50% 20px;
+  padding-top: 82px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 102px;
+    background-position: 50% 28px;
+  }
+}
+
+.advantages__item--nature {
+  background-image: url("../__spritemap#sprite-advantages-flower-view");
+  padding-top: 83px;
+  background-position: 50% 21px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 102px;
+    background-position: 50% 28px;
+  }
+}
+
+.advantages__item h3 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+}
+
+.advantages__item p {
+  margin: 0;
+}
+
+.advantages__buttons {
+  display: none;
+}

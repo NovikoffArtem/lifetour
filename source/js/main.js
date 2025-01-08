@@ -121,11 +121,9 @@ export const setupReviewsSwiper = () => {
         },
 
         1150: {
-          // slidesPerView: 3,
           spaceBetween: 30,
         },
         1440: {
-          // slidesPerView: 3,
           spaceBetween: 120,
         },
 
