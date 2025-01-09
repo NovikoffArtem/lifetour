@@ -134,6 +134,48 @@ export const setupReviewsSwiper = () => {
 };
 setupReviewsSwiper();
 
+let advSwiper;
+export const setupAdvSwiper = () => {
+  if(document.querySelector('.advantages__swiper')){
+    advSwiper = new Swiper('.advantages__swiper', {
+      loop: true,
+      slidesPerView: 'auto',
+      slidesPerGroup: 2,
+      initialSlide: 1,
+      spaceBetween: 30,
+      modules: [Navigation],
+      navigation: {
+        nextEl: '.swiper-button--advantage-next',
+        prevEl: '.swiper-button--advantage-prev',
+      },
+
+    });
+  }
+};
+
+
+function destroySwiper() {
+  if (advSwiper) {
+    advSwiper.destroy(true, true);
+    advSwiper = null;
+  }
+}
+
+function handleResize() {
+  if (window.innerWidth >= 1150) {
+    if (!advSwiper) {
+      setupAdvSwiper();
+    }
+  } else {
+    destroySwiper();
+  }
+}
+
+handleResize();
+
+window.addEventListener('resize', handleResize);
+
+
 // бургер
 const headerButton = document.querySelector('.nav__toggle');
 const navMenu = document.querySelector('.nav');
