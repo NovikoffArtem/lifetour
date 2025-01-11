@@ -54,10 +54,7 @@
 .gallery__item:nth-child(even) {
   display: flex;
   flex-direction: column;
-}
-
-.gallery picture {
-  display: block;
+  gap: 3px;
 }
 
 .gallery__image {
