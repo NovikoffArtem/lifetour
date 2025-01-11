@@ -19,10 +19,15 @@
   }
 }
 
+.hero__swiper-wrapper {
+  display: flex;
+}
+
 .hero__item {
   padding: 144px 15px 40px;
   position: relative;
   min-height: 568px;
+
 
   @media (width >= 500px) {
     min-height: 650px;
@@ -300,6 +305,7 @@
   justify-content: center;
   gap: 12px;
   margin-bottom: 32px;
+  z-index: 5;
 
   @media (min-width: $desktop-width) {
     justify-content: flex-end;

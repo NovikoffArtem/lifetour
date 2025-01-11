@@ -57,6 +57,8 @@
     <h1 class="visually-hidden">Lifetour. Оргизация походов в горы.</h1>
     <section class="hero" data-test="hero">
       <div class="hero__wrapper swiper">
+        <div class="hero__pagination swiper-pagination">
+        </div>
         <div class="hero__swiper-wrapper swiper-wrapper">
           <div class="hero__item hero__item--caucasus swiper-slide">
             <picture>
@@ -117,8 +119,7 @@
             </div>
           </div>
         </div>
-        <div class="hero__pagination swiper-pagination">
-        </div>
+
       </div>
     </section>
 
@@ -503,84 +504,89 @@
     </section>
 
     <section class="gallery" data-test="gallery" id="gallery">
-      <h2 class="gallery__title section-title">Фотогалерея</h2>
-      <div class="gallery__text-wrapper title-wrapper">
-        <p>Добавляйте фото с хэштегом #лайфтур,
-          а также отмечайте нас на фото. Лучшие фотографии украсят этот раздел нашего сайта.</p>
-        <div class="gallery__buttons swiper-buttons">
-          <button class="swiper-button swiper-button--gallery-prev" type="button" aria-label="Предыдущее фото"></button>
-          <button class="swiper-button swiper-button--gallery-next" type="button" aria-label="Следующее фото"></button>
+      <div class="gallery__wrapper content-wrapper">
+        <h2 class="gallery__title section-title">Фотогалерея</h2>
+        <div class="gallery__text-wrapper title-wrapper">
+          <p>Добавляйте фото с хэштегом #лайфтур,
+            а также отмечайте нас на фото. Лучшие фотографии украсят этот раздел нашего сайта.</p>
+          <div class="gallery__buttons swiper-buttons">
+            <button class="swiper-button swiper-button--prev swiper-button--gallery-prev" type="button" aria-label="Предыдущее фото"></button>
+            <button class="swiper-button swiper-button--next swiper-button--gallery-next" type="button" aria-label="Следующее фото"></button>
+          </div>
+        </div>
+        <div class="gallery__swiper swiper">
+          <ul class="gallery__list swiper-wrapper">
+            <li class="gallery__item swiper-slide">
+              <picture class="gallery__image">
+                <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-1-desktop@1x.webp 1x, img/images/gallery/photo-1-desktop@2x.webp 2x" width="284" height="468">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-1-tablet@1x.webp 1x, img/images/gallery/photo-1-tablet@2x.webp 2x" width="253" height="418">
+                <source type="image/webp" srcset="img/images/gallery/photo-1-mobile@1x.webp 1x, img/images/gallery/photo-1-mobile@2x.webp 2x" width="157" height="266">
+                <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-1-desktop@1x.jpg 1x, img/images/gallery/photo-1-desktop@2x.jpg 2x" width="284" height="463">
+                <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-1-tablet@1x.jpg 1x, img/images/gallery/photo-1-tablet@2x.jpg 2x" width="253" height="418">
+                <img src="img/images/gallery/photo-1-mobile@1x.jpg" srcset="img/images/gallery/photo-1-mobile@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
+              </picture>
+            </li>
+            <li class="gallery__item swiper-slide">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-2-desktop@1x.webp 1x, img/images/gallery/photo-2-desktop@2x.webp 2x" width="284" height="228">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-2-tablet@1x.webp 1x, img/images/gallery/photo-2-tablet@2x.webp 2x" width="253" height="206">
+                <source type="image/webp" srcset="img/images/gallery/photo-2-mobile@1x.webp 1x, img/images/gallery/photo-2-mobile@2x.webp 2x" width="157" height="134">
+                <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-2-desktop@1x.jpg 1x, img/images/gallery/photo-2-desktop@2x.jpg 2x" width="284" height="228">
+                <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-2-tablet@1x.jpg 1x, img/images/gallery/photo-2-tablet@2x.jpg 2x" width="253" height="206">
+                <img class="gallery__image" src="img/images/gallery/photo-2-mobile@1x.jpg" srcset="img/images/gallery/photo-2-mobile@2x.jpg 2x" width="158" height="134" alt="Человек на вершине горы любуется видами" loading="lazy">
+              </picture>
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-3-desktop@1x.webp 1x, img/images/gallery/photo-3-desktop@2x.webp 2x" width="284" height="228">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-3-tablet@1x.webp 1x, img/images/gallery/photo-3-tablet@2x.webp 2x" width="253" height="206">
+                <source type="image/webp" srcset="img/images/gallery/photo-3-mobile@1x.webp 1x, img/images/gallery/photo-3-mobile@2x.webp 2x" width="158" height="128">
+                <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-3-desktop@1x.jpg 1x, img/images/gallery/photo-3-desktop@2x.jpg 2x" width="284" height="228">
+                <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-3-tablet@1x.jpg 1x, img/images/gallery/photo-3-tablet@2x.jpg 2x" width="253" height="206">
+                <img class="gallery__image" src="img/images/gallery/photo-3-mobile@1x.jpg" srcset="img/images/gallery/photo-3-mobile@2x.jpg 2x" width="158" height="128" alt="Человек на вершине горы любуется видами" loading="lazy">
+              </picture>
+            </li>
+            <li class="gallery__item swiper-slide">
+              <picture class="gallery__image">
+                <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-4-desktop@1x.webp 1x, img/images/gallery/photo-4-desktop@2x.webp 2x" width="284" height="468">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-4-tablet@1x.webp 1x, img/images/gallery/photo-4-tablet@2x.webp 2x" width="253" height="418">
+                <source type="image/webp" srcset="img/images/gallery/photo-4-tablet@1x.webp 1x, img/images/gallery/photo-4-tablet@2x.webp 2x" width="157" height="266">
+                <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-4-desktop@1x.jpg 1x, img/images/gallery/photo-4-desktop@2x.jpg 2x" width="284" height="463">
+                <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-4-tablet@1x.jpg 1x, img/images/gallery/photo-4-tablet@2x.jpg 2x" width="253" height="418">
+                <img src="img/images/gallery/photo-4-tablet@1x.jpg" srcset="img/images/gallery/photo-4-tablet@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
+              </picture>
+            </li>
+            <li class="gallery__item swiper-slide">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-5-desktop@1x.webp 1x, img/images/gallery/photo-5-desktop@2x.webp 2x" width="284" height="228">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-5-desktop@1x.webp 1x, img/images/gallery/photo-5-desktop@2x.webp 2x" width="253" height="206">
+                <source type="image/webp" srcset="img/images/gallery/photo-5-desktop@1x.webp 1x, img/images/gallery/photo-5-desktop@2x.webp 2x" width="157" height="134">
+                <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-5-desktop@1x.jpg 1x, img/images/gallery/photo-5-desktop@2x.jpg 2x" width="284" height="228">
+                <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-5-desktop@1x.jpg 1x, img/images/gallery/photo-5-desktop@2x.jpg 2x" width="253" height="206">
+                <img class="gallery__image" src="img/images/gallery/photo-5-desktop@1x.jpg" srcset="img/images/gallery/photo-5-desktop@2x.jpg 2x" width="158" height="134" alt="Человек на вершине горы любуется видами" loading="lazy">
+              </picture>
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-6-desktop@1x.webp 1x, img/images/gallery/photo-6-desktop@2x.webp 2x" width="284" height="228">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-6-desktop@1x.webp 1x, img/images/gallery/photo-6-desktop@2x.webp 2x" width="253" height="206">
+                <source type="image/webp" srcset="img/images/gallery/photo-6-desktop@1x.webp 1x, img/images/gallery/photo-6-desktop@2x.webp 2x" width="158" height="128">
+                <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-6-desktop@1x.jpg 1x, img/images/gallery/photo-6-desktop@2x.jpg 2x" width="284" height="228">
+                <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-6-desktop@1x.jpg 1x, img/images/gallery/photo-6-desktop@2x.jpg 2x" width="253" height="206">
+                <img class="gallery__image" src="img/images/gallery/photo-6-desktop@1x.jpg" srcset="img/images/gallery/photo-6-desktop@2x.jpg 2x" width="158" height="128" alt="Человек на вершине горы любуется видами" loading="lazy">
+              </picture>
+            </li>
+            <li class="gallery__item swiper-slide">
+              <picture>
+                <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-7-desktop@1x.webp 1x, img/images/gallery/photo-7-desktop@2x.webp 2x" width="284" height="463">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-7-desktop@1x.webp 1x, img/images/gallery/photo-7-desktop@2x.webp 2x" width="253" height="418">
+                <source type="image/webp" srcset="img/images/gallery/photo-7-desktop@1x.webp 1x, img/images/gallery/photo-7-desktop@2x.webp 2x" width="158" height="266">
+                <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-7-desktop@1x.jpg 1x, img/images/gallery/photo-7-desktop@2x.jpg 2x" width="284" height="463">
+                <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-7-desktop@1x.jpg 1x, img/images/gallery/photo-7-desktop@2x.jpg 2x" width="253" height="418">
+                <img class="gallery__image" src="img/images/gallery/photo-7-desktop@1x.jpg" srcset="img/images/gallery/photo-7-desktop@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
+              </picture>
+            </li>
+          </ul>
         </div>
       </div>
-      <ul class="gallery__list">
-        <li class="gallery__item">
-          <picture>
-            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-1@1x.webp 1x, img/images/gallery/photo-1@2x.webp 2x" width="284" height="463">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-1@1x.webp 1x, img/images/gallery/photo-1@2x.webp 2x" width="253" height="418">
-            <source type="image/webp" srcset="img/images/gallery/photo-1@1x.webp 1x, img/images/gallery/photo-1@2x.webp 2x" width="158" height="266">
-            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-1@1x.jpg 1x, img/images/gallery/photo-1@2x.jpg 2x" width="284" height="463">
-            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-1@1x.jpg 1x, img/images/gallery/photo-1@2x.jpg 2x" width="253" height="418">
-            <img class="gallery__image" src="img/images/gallery/photo-1@1x.jpg" srcset="img/images/gallery/photo-1@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
-          </picture>
-        </li>
-        <li class="gallery__item">
-          <picture>
-            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-2@1x.webp 1x, img/images/gallery/photo-2@2x.webp 2x" width="284" height="228">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-2@1x.webp 1x, img/images/gallery/photo-2@2x.webp 2x" width="253" height="206">
-            <source type="image/webp" srcset="img/images/gallery/photo-2@1x.webp 1x, img/images/gallery/photo-2@2x.webp 2x" width="157" height="130">
-            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-2@1x.jpg 1x, img/images/gallery/photo-2@2x.jpg 2x" width="284" height="228">
-            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-2@1x.jpg 1x, img/images/gallery/photo-2@2x.jpg 2x" width="253" height="206">
-            <img class="gallery__image" src="img/images/gallery/photo-2@1x.jpg" srcset="img/images/gallery/photo-2@2x.jpg 2x" width="158" height="130" alt="Человек на вершине горы любуется видами" loading="lazy">
-          </picture>
-          <picture>
-            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-3@1x.webp 1x, img/images/gallery/photo-3@2x.webp 2x" width="284" height="228">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-3@1x.webp 1x, img/images/gallery/photo-3@2x.webp 2x" width="253" height="204">
-            <source type="image/webp" srcset="img/images/gallery/photo-3@1x.webp 1x, img/images/gallery/photo-3@2x.webp 2x" width="157" height="129">
-            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-3@1x.jpg 1x, img/images/gallery/photo-3@2x.jpg 2x" width="284" height="228">
-            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-3@1x.jpg 1x, img/images/gallery/photo-3@2x.jpg 2x" width="253" height="204">
-            <img class="gallery__image" src="img/images/gallery/photo-3@1x.jpg" srcset="img/images/gallery/photo-3@2x.jpg 2x" width="157" height="129" alt="Человек на вершине горы любуется видами" loading="lazy">
-          </picture>
-        </li>
-        <li class="gallery__item">
-          <picture>
-            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-4@1x.webp 1x, img/images/gallery/photo-4@2x.webp 2x" width="284" height="463">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-4@1x.webp 1x, img/images/gallery/photo-4@2x.webp 2x" width="253" height="418">
-            <source type="image/webp" srcset="img/images/gallery/photo-4@1x.webp 1x, img/images/gallery/photo-4@2x.webp 2x" width="158" height="266">
-            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-4@1x.jpg 1x, img/images/gallery/photo-4@2x.jpg 2x" width="284" height="463">
-            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-4@1x.jpg 1x, img/images/gallery/photo-4@2x.jpg 2x" width="253" height="418">
-            <img class="gallery__image" src="img/images/gallery/photo-4@1x.jpg" srcset="img/images/gallery/photo-4@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
-          </picture>
-        </li>
-        <li class="gallery__item">
-          <picture>
-            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-5@1x.webp 1x, img/images/gallery/photo-5@2x.webp 2x" width="284" height="228">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-5@1x.webp 1x, img/images/gallery/photo-5@2x.webp 2x" width="253" height="206">
-            <source type="image/webp" srcset="img/images/gallery/photo-5@1x.webp 1x, img/images/gallery/photo-5@2x.webp 2x" width="157" height="130">
-            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-5@1x.jpg 1x, img/images/gallery/photo-5@2x.jpg 2x" width="284" height="228">
-            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-5@1x.jpg 1x, img/images/gallery/photo-5@2x.jpg 2x" width="253" height="206">
-            <img class="gallery__image" src="img/images/gallery/photo-5@1x.jpg" srcset="img/images/gallery/photo-5@2x.jpg 2x" width="158" height="130" alt="Человек на вершине горы любуется видами" loading="lazy">
-          </picture>
-          <picture>
-            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-6@1x.webp 1x, img/images/gallery/photo-6@2x.webp 2x" width="284" height="228">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-6@1x.webp 1x, img/images/gallery/photo-6@2x.webp 2x" width="253" height="204">
-            <source type="image/webp" srcset="img/images/gallery/photo-6@1x.webp 1x, img/images/gallery/photo-6@2x.webp 2x" width="157" height="129">
-            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-6@1x.jpg 1x, img/images/gallery/photo-6@2x.jpg 2x" width="284" height="228">
-            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-6@1x.jpg 1x, img/images/gallery/photo-6@2x.jpg 2x" width="253" height="204">
-            <img class="gallery__image" src="img/images/gallery/photo-6@1x.jpg" srcset="img/images/gallery/photo-6@2x.jpg 2x" width="157" height="129" alt="Человек на вершине горы любуется видами" loading="lazy">
-          </picture>
-        </li>
-        <li class="gallery__item">
-          <picture>
-            <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-7@1x.webp 1x, img/images/gallery/photo-7@2x.webp 2x" width="284" height="463">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/images/gallery/photo-7@1x.webp 1x, img/images/gallery/photo-7@2x.webp 2x" width="253" height="418">
-            <source type="image/webp" srcset="img/images/gallery/photo-7@1x.webp 1x, img/images/gallery/photo-7@2x.webp 2x" width="158" height="266">
-            <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-7@1x.jpg 1x, img/images/gallery/photo-7@2x.jpg 2x" width="284" height="463">
-            <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-7@1x.jpg 1x, img/images/gallery/photo-7@2x.jpg 2x" width="253" height="418">
-            <img class="gallery__image" src="img/images/gallery/photo-7@1x.jpg" srcset="img/images/gallery/photo-7@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
-          </picture>
-        </li>
-      </ul>
     </section>
+
     <section class="form-section" data-test="form">
       <h3>Остались вопросы?</h3>
       <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>

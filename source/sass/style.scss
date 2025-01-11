@@ -26,30 +26,13 @@
 @import "./blocks/about";
 @import "./blocks/reviews";
 @import "./blocks/advantage";
+@import "./blocks/gallery";
 
 ul {
   list-style: none;
   padding: 0;
 }
 
-.gallery__image {
-  object-fit: cover;
-  display: block;
-
-  height: auto;
-}
-
-.gallery li:nth-child(even) {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.gallery ul {
-  display: flex;
-  gap: 5px;
-  overflow: hidden;
-}
 
 .form {
   display: flex;

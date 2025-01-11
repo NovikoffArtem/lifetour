@@ -15,6 +15,8 @@ export const setupHeroSwiper = () => {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        renderBullet: (index, className) => `<button class="${className}" type="button" tabindex='0'><span class="visually-hidden">Слайд ${index + 1}</span></button>`,
+        keyboard: true,
       },
 
       breakpoints: {
@@ -26,6 +28,12 @@ export const setupHeroSwiper = () => {
   }
 };
 setupHeroSwiper();
+
+const activeSlide = document.querySelector('.hero .swiper-slide-active');
+const link = activeSlide.querySelector('.hero__link');
+link.setAttribute('tabindex', '-1');
+console.log(link);
+
 
 export const setupTrainingSwiper = () => {
   if(document.querySelector('.trainers')){
@@ -66,9 +74,9 @@ export const setupToursSwiper = () => {
     new Swiper('.tours__swiper', {
       loop: false,
       allowTouchMove: true,
+      spaceBetween: 18,
 
       modules: [Navigation],
-      spaceBetween: 18,
       navigation: {
         nextEl: '.swiper-button--tours-next',
         prevEl: '.swiper-button--tours-prev',
@@ -98,10 +106,10 @@ export const setupReviewsSwiper = () => {
     new Swiper('.reviews__swiper', {
       loop: false,
       allowTouchMove: true,
-
-      modules: [Navigation],
       spaceBetween: 15,
       slidesPerView: 'auto',
+
+      modules: [Navigation],
       navigation: {
         nextEl: '.swiper-button--review-next',
         prevEl: '.swiper-button--review-prev',
@@ -134,42 +142,114 @@ export const setupReviewsSwiper = () => {
 };
 setupReviewsSwiper();
 
+// свайпер Преимуществ
+const dublicateElem = (parrent) => {
+  const par = document.querySelector(parrent);
+  const childElements = par.children;
+  Array.from(childElements).forEach((elem) => {
+    par.insertAdjacentHTML('beforeend', elem.outerHTML);
+  });
+};
+
+
+// const dublicateElem = (parrent, child) => {
+//   const par = document.querySelector(parrent);
+//   const childs = document.querySelectorAll(child);
+
+//   for (let i = 0; i < childs.length; i++) {
+//     const elem = childs[i];
+//     par.insertAdjacentHTML('beforeend', elem.outerHTML);
+//     // console.log(childs[i]);
+//   }
+// };
+
 let advSwiper;
 export const setupAdvSwiper = () => {
   if(document.querySelector('.advantages__swiper')){
     advSwiper = new Swiper('.advantages__swiper', {
+      direction: 'horizontal',
       loop: true,
-      slidesPerView: 'auto',
+      modules: [Navigation],
+      simulateTouch: false,
+      // on: {
+      //   init: () => {
+      //     dublicateElem('.advantages__list', '.advantages__item');
+      //   }
+      // },
+
+      slidesPerView: 5,
       slidesPerGroup: 2,
       initialSlide: 1,
-      spaceBetween: 30,
-      modules: [Navigation],
+      spaceBetween: 0,
+      centeredSlides: true,
+
       navigation: {
         nextEl: '.swiper-button--advantage-next',
         prevEl: '.swiper-button--advantage-prev',
       },
 
+
     });
   }
 };
 
+const deleteDublicate = () => document.location.reload(true);
 
 function destroySwiper() {
   if (advSwiper) {
     advSwiper.destroy(true, true);
     advSwiper = null;
+    deleteDublicate();
   }
 }
+
 
 function handleResize() {
   if (window.innerWidth >= 1150) {
     if (!advSwiper) {
+      dublicateElem('.advantages__list');
       setupAdvSwiper();
     }
   } else {
     destroySwiper();
+
   }
 }
+
+
+export const setupGallerySwiper = () => {
+  if(document.querySelector('.gallery__swiper')){
+    new Swiper('.gallery__swiper', {
+      loop: true,
+      slidesPerView: 'auto',
+      // slidesPerGroup: 1,
+      modules: [Navigation],
+      spaceBetween: 5,
+      navigation: {
+        nextEl: '.swiper-button--gallery-next',
+        prevEl: '.swiper-button--gallery-prev',
+      },
+      breakpoints: {
+        320: {
+          // slidesPerView: 2,
+        },
+        550: {
+          // slidesPerView: 3,
+        },
+        768: {
+          // slidesPerView: 3,
+        },
+        1440: {
+          enabled: false,
+          allowTouchMove: false,
+        },
+      },
+
+    });
+  }
+};
+setupGallerySwiper();
+
 
 handleResize();
 
