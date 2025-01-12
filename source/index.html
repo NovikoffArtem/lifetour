@@ -606,10 +606,13 @@
         </div>
       </div>
     </section>
+  </main>
+
+  <footer class="footer-section" data-test="footer">
     <section class="contacts" data-test="footer" id="contacts">
-      <h2 class="contacts__title section-title">Контакты</h2>
-      <div class="contacts__inner">
+      <div class="contacts__wrapper">
         <div class="contacts__text-wrapper">
+          <h2 class="contacts__title section-title">Контакты</h2>
           <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
           <ul class="contacts__list">
             <li class="contacts__item contacts__item--phone">
@@ -622,7 +625,7 @@
             </li>
             <li class="contacts__item contacts__item--adres">
               <h3 class="contacts__item-title">Адрес</h3>
-              <p class="contacts__item-desc">г. Москва, пр-т Мира, д. 14, офис 101</p>
+              <span class="contacts__item-desc">г. Москва, пр-т Мира, д. 14, офис 101</span>
             </li>
           </ul>
         </div>
@@ -636,41 +639,41 @@
         </picture>
       </div>
     </section>
-
-  </main>
-  <footer class="footer">
-    <a class="footer__logo-link" href="#">
-      <img class="logo logo--footer" src="img/images/logo/logo-footer.svg" width="142" height="42" alt="Логотип нашего сайта">
-    </a>
-    <nav class="footer__nav" aria-label="Навигация по нашему сайту">
-      <ul class="footer__nav-list">
-        <li class="footer__nav-item"><a class="footer__nav-link" href="#tours">Туры</a></li>
-        <li class="footer__nav-item"><a class="footer__nav-link" href="#training">Обучение</a></li>
-        <li class="footer__nav-item"><a class="footer__nav-link" href="#about">О нас</a></li>
-        <li class="footer__nav-item"><a class="footer__nav-link" href="#reviews">Отзывы</a></li>
-        <li class="footer__nav-item"><a class="footer__nav-link" href="#gallery">фотографии</a></li>
-        <li class="footer__nav-item"><a class="footer__nav-link" href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
-    <ul class="footer__social social">
-      <li class="social__item">
-        <a class="social__link social__link--vk" href="#" aria-label="Мы в Контакте">
-        </a>
-      </li>
-
-      <li class="social__item">
-        <a class="social__link social__link--ok" href="#" aria-label="Мы в Одноклассниках">
-        </a>
-      </li>
-
-      <li class="social__item">
-        <a class="social__link social__link--reddit" href="#" aria-label="Наш Реддит">
-        </a>
-      </li>
-
-    </ul>
-
-    <a class="footer__copyright" href="#">Политика конфиденциальности</a>
+    <section class="footer">
+      <div class="footer__wrapper content-wrapper">
+        <div class="footer__top-wrapper">
+          <a class="footer__logo-link" href="#">
+            <img class="logo logo--footer" src="img/images/logo/logo-footer.svg" width="142" height="42" alt="Логотип нашего сайта">
+          </a>
+          <nav class="footer__nav" aria-label="Навигация по нашему сайту">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#tours">Туры</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#training">Обучение</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#about">О нас</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#reviews">Отзывы</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#gallery">Фотографии</a></li>
+              <li class="footer__nav-item"><a class="footer__nav-link" href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+          <a class="footer__nav-phone" href="tel:88000000000">8 800 725-32-32</a>
+        </div>
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#" aria-label="Мы в Контакте">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--ok" href="#" aria-label="Мы в Одноклассниках">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--reddit" href="#" aria-label="Наш Реддит">
+            </a>
+          </li>
+        </ul>
+        <a class="footer__copyright" href="#">Политика конфиденциальности</a>
+      </div>
+    </section>
   </footer>
   <script type="module" src="js/main.js"></script>
 </body>

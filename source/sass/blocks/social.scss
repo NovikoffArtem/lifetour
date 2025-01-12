@@ -1,0 +1,54 @@
+.social {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 3px;
+  }
+
+  @media (min-width: $max-tablet-width) {
+    gap: 13px;
+    padding-left: 0;
+  }
+}
+
+.social__link {
+  width: 32px;
+  height: 30px;
+  display: block;
+  position: relative;
+  border: 1px solid $border-icon;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    mask-repeat: no-repeat;
+    background-color: $base-text-color;
+  }
+}
+
+.social__link--vk::after {
+  mask-image: url("../__spritemap#sprite-vk-view");
+  width: 16px;
+  height: 9px;
+}
+
+.social__link--ok::after {
+  mask-image: url("../__spritemap#sprite-ok-view");
+  width: 9px;
+  height: 16px;
+}
+
+.social__link--reddit::after {
+  mask-image: url("../__spritemap#sprite-reddit-view");
+  width: 14px;
+  height: 15px;
+}
+

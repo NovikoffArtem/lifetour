@@ -28,40 +28,6 @@
 @import "./blocks/advantage";
 @import "./blocks/gallery";
 @import "./blocks/form";
-
-// ul {
-//   list-style: none;
-//   padding: 0;
-// }
-
-
-.contacts {
-  margin-block: 20px;
-}
-
-.contacts__inner {
-  @media (width >= 1100px) {
-    display: flex;
-  }
-}
-
-.contacts__image {
-  object-fit: cover;
-
-  width: 100%;
-  display: block;
-
-  // transform: scale(0.8);
-
-  @media (width >= 768px) {
-    object-position: 0;
-  }
-
-  @media (width >= 1100px) {
-    width: auto;
-  }
-}
-
-.footer__nav-list {
-  column-count: 2;
-}
+@import "./blocks/contacts";
+@import "./blocks/footer";
+@import "./blocks/social";
