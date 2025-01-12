@@ -1,25 +1,97 @@
 .gallery__wrapper {
   padding-inline: 0;
+  padding-bottom: 3px;
 }
 
 .gallery__title {
   padding: 17px 15px 0;
   margin-bottom: 7px;
 
+  @media (min-width: $tablet-width) {
+    padding: 20px 45px;
+    margin: 0;
+  }
+
+  @media (min-width: $max-tablet-width) {
+    padding: 23px 120px;
+  }
+
   &::after {
     left: 15px;
-    top: auto;
-    bottom: 10px;
+
+
+    @media (min-width: $tablet-width) {
+      left: 45px;
+      bottom: 20px;
+    }
+
+    @media (min-width: $max-tablet-width) {
+      left: 120px;
+
+      // bottom: 20px;
+    }
   }
 }
 
 .gallery__text-wrapper {
   padding-inline: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 45px 7px;
+  }
+
+  @media (min-width: $max-tablet-width) {
+    padding: 0 120px 20px;
+    margin-bottom: 26px;
+  }
 }
 
 .gallery p {
   margin: 0;
   margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    width: 60%;
+  }
+
+  @media (min-width: $max-tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 55%;
+    margin: 0;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.gallery .swiper {
+  width: 320px;
+
+  @media (width >= 480px) {
+    width: 480px;
+  }
+
+  @media (width >= 643px) {
+    width: 643px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (width >= 1024px) {
+    width: 1024px;
+  }
+
+  @media (width >= 1281px) {
+    width: 1281px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
 }
 
 .gallery__list {
@@ -27,42 +99,54 @@
 
   display: flex;
 
-  // gap: 6px;
+  @media (min-width: $max-tablet-width) {
+    gap: 6px;
+  }
+
+  @media (width >= 1281px) {
+    gap: 5px;
+  }
 }
 
+
 .gallery .swiper-slide {
-  max-width: 158px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 
   @media (min-width: $tablet-width) {
-    max-width: 253px;
+    max-height: 418px;
+    gap: 6px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 284px;
+    gap: 7px;
+    min-height: 463px;
   }
 }
 
 .gallery__item {
   max-width: 158px;
 
+
   @media (min-width: $tablet-width) {
     max-width: 253px;
   }
 }
 
-
-.gallery__item:nth-child(even) {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
 .gallery__image {
   display: block;
+
+  @media (min-width: $tablet-width) {
+    height: auto;
+  }
 }
 
 .gallery__buttons {
-  @media (min-width: $desktop-width) {
+  padding-top: 16px;
+
+  @media (width >= 1281px) {
     display: none;
   }
 }

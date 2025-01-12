@@ -37,8 +37,9 @@
 }
 
 .reviews__title::after {
-  bottom: 20px;
-  top: auto;
+  @media (min-width: $desktop-width) {
+    bottom: 20px;
+  }
 }
 
 .reviews .swiper {

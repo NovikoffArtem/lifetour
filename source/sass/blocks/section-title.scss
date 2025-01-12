@@ -20,16 +20,18 @@
   font-size: 26px;
   line-height: 1;
   opacity: 0.03;
-  top: -16px;
+  bottom: 10px;
   left: 0;
   width: 300px;
 
   @media (min-width: $tablet-width) {
     font-size: 40px;
     width: 600px;
+    bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 55px;
+    bottom: -5px;
   }
 }

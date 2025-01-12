@@ -6,8 +6,6 @@
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
-
-  // background-color: rebeccapurple;
 }
 
 .advantages__title {
@@ -38,13 +36,6 @@
 
   @media (min-width: $max-tablet-width) {
     bottom: 10px;
-  }
-}
-
-.advantages .swiper {
-  @media (min-width: $max-tablet-width) {
-    // overflow: visible;
-    // width: 2020px;
   }
 }
 
@@ -104,7 +95,7 @@
   max-width: 300px;
 
   @media (min-width: $tablet-width) {
-    max-width: 324px;
+    min-width: 324px;
     min-height: 340px;
   }
 

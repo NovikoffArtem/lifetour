@@ -32,7 +32,6 @@ setupHeroSwiper();
 const activeSlide = document.querySelector('.hero .swiper-slide-active');
 const link = activeSlide.querySelector('.hero__link');
 link.setAttribute('tabindex', '-1');
-console.log(link);
 
 
 export const setupTrainingSwiper = () => {
@@ -144,65 +143,93 @@ setupReviewsSwiper();
 
 // свайпер Преимуществ
 const dublicateElem = (parrent) => {
-  const par = document.querySelector(parrent);
-  const childElements = par.children;
+  const parrentList = document.querySelector(parrent);
+  const childElements = parrentList.children;
   Array.from(childElements).forEach((elem) => {
-    par.insertAdjacentHTML('beforeend', elem.outerHTML);
+    parrentList.insertAdjacentHTML('beforeend', elem.outerHTML);
   });
 };
 
 
-// const dublicateElem = (parrent, child) => {
-//   const par = document.querySelector(parrent);
-//   const childs = document.querySelectorAll(child);
+const deleteDublicate = (parrent) => {
+  const parrentList = document.querySelector(parrent);
+  const childElems = parrentList.children;
+  const newList = new Set();
 
-//   for (let i = 0; i < childs.length; i++) {
-//     const elem = childs[i];
-//     par.insertAdjacentHTML('beforeend', elem.outerHTML);
-//     // console.log(childs[i]);
-//   }
-// };
+  Array.from(childElems).forEach((elem) => {
+    const text = elem.textContent;
+    if(newList.has(text)) {
+      parrentList.removeChild(elem);
+    } else {
+      newList.add(text);
+    }
+  });
+};
 
 let advSwiper;
 export const setupAdvSwiper = () => {
   if(document.querySelector('.advantages__swiper')){
     advSwiper = new Swiper('.advantages__swiper', {
       direction: 'horizontal',
+      breakpoints: {
+        1: {
+          enabled: false,
+        },
+        1150: {
+          enabled: true,
+        }
+      },
       loop: true,
-      modules: [Navigation],
       simulateTouch: false,
-      // on: {
-      //   init: () => {
-      //     dublicateElem('.advantages__list', '.advantages__item');
-      //   }
-      // },
-
       slidesPerView: 5,
       slidesPerGroup: 2,
       initialSlide: 1,
       spaceBetween: 0,
       centeredSlides: true,
-
+      modules: [Navigation],
       navigation: {
         nextEl: '.swiper-button--advantage-next',
         prevEl: '.swiper-button--advantage-prev',
       },
 
-
     });
   }
 };
 
-const deleteDublicate = () => document.location.reload(true);
+function destroySwiper(swiper) {
+  if (swiper) {
+    swiper.destroy(true, true);
+    swiper = null;
 
-function destroySwiper() {
-  if (advSwiper) {
-    advSwiper.destroy(true, true);
-    advSwiper = null;
-    deleteDublicate();
   }
 }
 
+export const setupGallerySwiper = () => {
+  if(document.querySelector('.gallery__swiper')){
+    new Swiper('.gallery__swiper', {
+      loop: true,
+      slidesPerView: 'auto',
+      modules: [Navigation],
+      spaceBetween: 5,
+      navigation: {
+        nextEl: '.swiper-button--gallery-next',
+        prevEl: '.swiper-button--gallery-prev',
+      },
+      breakpoints: {
+        768: {
+          enabled: true,
+          spaceBetween: 5,
+        },
+        1281: {
+          spaceBetween: 0,
+          enabled: false,
+        }
+      },
+
+    });
+  }
+};
+setupGallerySwiper();
 
 function handleResize() {
   if (window.innerWidth >= 1150) {
@@ -211,45 +238,11 @@ function handleResize() {
       setupAdvSwiper();
     }
   } else {
-    destroySwiper();
-
+    destroySwiper(advSwiper);
+    deleteDublicate('.advantages__list');
   }
+
 }
-
-
-export const setupGallerySwiper = () => {
-  if(document.querySelector('.gallery__swiper')){
-    new Swiper('.gallery__swiper', {
-      loop: true,
-      slidesPerView: 'auto',
-      // slidesPerGroup: 1,
-      modules: [Navigation],
-      spaceBetween: 5,
-      navigation: {
-        nextEl: '.swiper-button--gallery-next',
-        prevEl: '.swiper-button--gallery-prev',
-      },
-      breakpoints: {
-        320: {
-          // slidesPerView: 2,
-        },
-        550: {
-          // slidesPerView: 3,
-        },
-        768: {
-          // slidesPerView: 3,
-        },
-        1440: {
-          enabled: false,
-          allowTouchMove: false,
-        },
-      },
-
-    });
-  }
-};
-setupGallerySwiper();
-
 
 handleResize();
 

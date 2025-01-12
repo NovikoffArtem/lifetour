@@ -27,21 +27,16 @@
 @import "./blocks/reviews";
 @import "./blocks/advantage";
 @import "./blocks/gallery";
+@import "./blocks/form";
 
-ul {
-  list-style: none;
-  padding: 0;
-}
+// ul {
+//   list-style: none;
+//   padding: 0;
+// }
 
-
-.form {
-  display: flex;
-  margin-bottom: 20px;
-  flex-direction: column;
-}
 
 .contacts {
-  margin-bottom: 20px;
+  margin-block: 20px;
 }
 
 .contacts__inner {
@@ -52,8 +47,11 @@ ul {
 
 .contacts__image {
   object-fit: cover;
-  object-position: calc(50% + 15px);
+
   width: 100%;
+  display: block;
+
+  // transform: scale(0.8);
 
   @media (width >= 768px) {
     object-position: 0;
