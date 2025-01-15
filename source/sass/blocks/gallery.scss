@@ -27,8 +27,6 @@
 
     @media (min-width: $max-tablet-width) {
       left: 120px;
-
-      // bottom: 20px;
     }
   }
 }
@@ -105,6 +103,7 @@
 
   @media (width >= 1281px) {
     gap: 5px;
+    flex-wrap: wrap;
   }
 }
 
