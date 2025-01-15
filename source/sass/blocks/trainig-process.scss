@@ -168,9 +168,7 @@
   justify-self: start;
 
   &::after {
-    // background-image: url("../__spritemap#sprite-process-mountain-view"); не работает со спрайтом, поэтому добавил через файл
-
-    background-image: url("../../img/sprite/process-mountain.svg");
+    background-image: url("../img/sprite/process-mountain.svg");
     top: 2px;
     left: 29px;
 

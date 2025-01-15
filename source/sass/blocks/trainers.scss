@@ -42,6 +42,10 @@
   @media (min-width: $med-tab-width) {
     max-width: 285px;
   }
+
+  @media (min-width: $med-tab-width-2) {
+    height: 356px;
+  }
 }
 
 .trainers__card {

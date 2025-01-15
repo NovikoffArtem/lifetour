@@ -3,6 +3,14 @@
   position: fixed;
   width: 100%;
   z-index: 20;
+
+  @media (min-width: $desktop-width) {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    min-height: 127px;
+    top: -74px;
+  }
 }
 
 .header__wrapper {
@@ -14,9 +22,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 37px 120px;
+    padding-inline: 120px;
+    padding-block: 0;
     width: 1440px;
     margin: 0 auto;
+    min-height: 53px;
+    position: sticky;
+    top: 0;
   }
 }
 
