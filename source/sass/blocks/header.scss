@@ -33,9 +33,10 @@
 }
 
 .header__logo {
-  display: inline-block;
-  text-align: right;
+  display: flex;
+  align-self: end;
   margin-top: 1px;
+  transition: all 300ms ease;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
@@ -43,6 +44,63 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 32px;
-    margin-top: 5px;
+    align-self: center;
   }
+
+
+  &:focus-visible {
+    outline: 1px solid $base-light;
+  }
+}
+
+.header__phone {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 600;
+  color: $base-light;
+  text-decoration: none;
+  display: flex;
+  align-self: end;
+  order: 2;
+  transition: all 300ms ease;
+
+  @media (min-width: $min-tablet-width) {
+    display: block;
+    align-self: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    padding-top: 3px;
+  }
+
+  @media (min-width: $max-tablet-width) {
+    width: 160px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+
+    // padding-top: 0;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: $base-text-color;
+  }
+
+  &:active {
+    color: $active-color;
+    opacity: 1;
+  }
+}
+
+.header__phone--disabled {
+  color: $disabled;
+  pointer-events: none;
 }

@@ -31,12 +31,11 @@
     <div class="header__wrapper">
       <nav class="header__nav nav" aria-label="Навигация по сайту">
         <button class="nav__toggle button" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="nav__toggle-inner" aria-label="Открыть меню"></span>
         </button>
         <a class="header__logo" aria-current="page" href="#">
           <img class="logo logo--header" src="img/images/logo/logo.svg" alt="Логотип" width="142" height="42">
         </a>
-        <a class="nav__phone" href="tel:88000000000">8 800 000-00-00</a>
         <ul class="nav__list">
           <li class="nav__list-item"><a class="nav__link" href="#tours">Туры</a></li>
           <li class="nav__list-item"><a class="nav__link" href="#training">Обучение</a></li>
@@ -45,6 +44,7 @@
           <li class="nav__list-item"><a class="nav__link" href="#gallery">Фотографии</a></li>
           <li class="nav__list-item"><a class="nav__link" href="#contacts">Контакты</a></li>
         </ul>
+        <a class="header__phone" href="tel:88000000000">8 800 000-00-00</a>
       </nav>
     </div>
   </header>
@@ -63,7 +63,7 @@
               <source type="image/webp" srcset="img/images/hero/hero-caucasus-tablet@1x.webp 1x, img/images/hero/hero-caucasus-tablet@2x.webp 2x" width="320" height="568">
               <source media="(min-width: 940px)" type="image/jpg" srcset="img/images/hero/hero-caucasus-desktop@1x.jpg 1x, img/images/hero/hero-caucasus-desktop@2x.jpg 2x" width="1440" height="800">
               <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/hero/hero-caucasus-tablet@1x.jpg 1x, img/images/hero/hero-caucasus-tablet@2x.jpg 2x" width="768" height="1034">
-              <img class="hero__image" src="img/images/hero/hero-caucasus-tablet@1x.jpg" srcset="img/images/hero/hero-caucasus-tablet@2x.jpg 2x" width="320" height="568" alt="Захватывающие вершины Кавказа" loading="lazy">
+              <img class="hero__image" src="img/images/hero/hero-caucasus-tablet@1x.jpg" srcset="img/images/hero/hero-caucasus-tablet@2x.jpg 2x" width="320" height="568" alt="Горный пейзаж. Ясное небо с лёгкими облаками." loading="lazy">
             </picture>
             <div class="hero__text-wrapper">
               <h2>Захватывающие вершины Кавказа</h2>
@@ -83,7 +83,7 @@
               <source type="image/webp" srcset="img/images/hero/hero-kamch-tablet@1x.webp 1x, img/images/hero/hero-kamch-tablet@2x.webp 2x" width="320" height="568">
               <source media="(min-width: 940px)" type="image/jpg" srcset="img/images/hero/hero-kamch-desktop@1x.jpg 1x, img/images/hero/hero-kamch-desktop@2x.jpg 2x" width="1440" height="800">
               <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/hero/hero-kamch-tablet@1x.jpg 1x, img/images/hero/hero-kamch-tablet@2x.jpg 2x" width="768" height="1034">
-              <img class="hero__image" src="img/images/hero/hero-kamch-tablet@1x.jpg" srcset="img/images/hero/hero-kamch-tablet@2x.jpg 2x" width="320" height="568" alt="Захватывающие вершины Кавказа" loading="lazy">
+              <img class="hero__image" src="img/images/hero/hero-kamch-tablet@1x.jpg" srcset="img/images/hero/hero-kamch-tablet@2x.jpg 2x" width="320" height="568" alt="Горный пейзаж. Вдали видны величественные горы под ясным небом. Это живописное место в природном резервате с чистым воздухом и красивыми видами." loading="lazy">
             </picture>
             <div class="hero__text-wrapper">
               <h2>Невероятная природа Камчатки</h2>
@@ -102,7 +102,7 @@
               <source type="image/webp" srcset="img/images/hero/hero-altay-tablet@1x.webp 1x, img/images/hero/hero-altay-tablet@2x.webp 2x" width="320" height="568">
               <source media="(min-width: 940px)" type="image/jpg" srcset="img/images/hero/hero-altay-desktop@1x.jpg 1x, img/images/hero/hero-altay-desktop@2x.jpg 2x" width="1440" height="800">
               <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/hero/hero-altay-tablet@1x.jpg 1x, img/images/hero/hero-altay-tablet@2x.jpg 2x" width="768" height="1034">
-              <img class="hero__image" src="img/images/hero/hero-altay-tablet@1x.jpg" srcset="img/images/hero/hero-altay-tablet@2x.jpg 2x" width="320" height="568" alt="Захватывающие вершины Кавказа" loading="lazy">
+              <img class="hero__image" src="img/images/hero/hero-altay-tablet@1x.jpg" srcset="img/images/hero/hero-altay-tablet@2x.jpg 2x" width="320" height="568" alt="Горный пейзаж с извилистой рекой, протекающей через долину, окружённую склонами и зелёными лесами. Осенние деревья с жёлтой листвой подчеркивают изгибы реки. На заднем плане возвышаются массивные горы под голубым небом с лёгкими облаками." loading="lazy">
             </picture>
             <div class="hero__text-wrapper">
               <h2>Магические пейзажи Алтайского Края</h2>
@@ -134,7 +134,7 @@
               <li class="tours__item card swiper-slide">
                 <picture>
                   <source type="image/webp" srcset="img/images/tours/tours-caucasus-desktop@1x.webp 1x, img/images/tours/tours-caucasus-desktop@2x.webp 2x" width="380" height="416">
-                  <img class="card__image" src="img/images/tours/tours-caucasus-desktop@1x.jpg" srcset="img/images/tours/tours-caucasus-mobile@2x.jpg 2x" width="380" height="416" alt="Лучи солнца пробиваются сквозь облака над великолепными горами" loading="lazy">
+                  <img class="card__image" src="img/images/tours/tours-caucasus-desktop@1x.jpg" srcset="img/images/tours/tours-caucasus-mobile@2x.jpg 2x" width="380" height="416" alt="Впечатляющий пейзаж с высокими горами и зелеными долинами. На переднем плане река извивается по дну долины, окружённая группами деревьев. Свет проникает сквозь облака, создавая драматические лучи, которые подчеркивают горные вершины вдали. " loading="lazy">
                 </picture>
                 <div class="card__text-wrapper">
                   <div class="card__top">
@@ -166,7 +166,7 @@
               <li class="tours__item card swiper-slide">
                 <picture>
                   <source type="image/webp" srcset="img/images/tours/tours-altay-desktop@1x.webp 1x, img/images/tours/tours-altay-desktop@2x.webp 2x" width="380" height="416">
-                  <img class="card__image" src="img/images/tours/tours-altay-desktop@1x.jpg" srcset="img/images/tours/tours-altay-mobile@2x.jpg 2x" width="380" height="416" alt="Вид на горы Алтая" loading="lazy">
+                  <img class="card__image" src="img/images/tours/tours-altay-desktop@1x.jpg" srcset="img/images/tours/tours-altay-mobile@2x.jpg 2x" width="380" height="416" alt="Озеро, обрамленное горами и лесом, представляет собой идиллический уголок природы, наполненный спокойствием." loading="lazy">
                 </picture>
                 <div class="card__text-wrapper">
                   <div class="card__top">
@@ -199,7 +199,7 @@
               <li class="tours__item card swiper-slide">
                 <picture>
                   <source type="image/webp" srcset="img/images/tours/tours-adygeya-desktop@1x.webp 1x, img/images/tours/tours-adygeya-desktop@2x.webp 2x" width="380" height="416">
-                  <img class="card__image" src="img/images/tours/tours-adygeya-desktop@1x.jpg" srcset="img/images/tours/tours-adygeya-mobile@2x.jpg 2x" width="380" height="416" alt="Вид на горы Адыгеи" loading="lazy">
+                  <img class="card__image" src="img/images/tours/tours-adygeya-desktop@1x.jpg" srcset="img/images/tours/tours-adygeya-mobile@2x.jpg 2x" width="380" height="416" alt="Горы с зелеными травами на склонах, окруженные облаками, создают живописный пейзаж природы." loading="lazy">
                 </picture>
                 <div class="card__text-wrapper">
                   <div class="card__top">
@@ -232,7 +232,8 @@
               <li class="tours__item card swiper-slide">
                 <picture>
                   <source type="image/webp" srcset="img/images/tours/tours-ural-desktop@1x.webp 1x, img/images/tours/tours-ural-desktop@2x.webp 2x" width="380" height="416">
-                  <img class="card__image" src="img/images/tours/tours-ural-desktop@1x.jpg" srcset="img/images/tours/tours-ural-mobile@2x.jpg 2x" width="380" height="416" alt="Вид на горы Урала" loading="lazy">
+                  <img class="card__image" src="img/images/tours/tours-ural-desktop@1x.jpg" srcset="img/images/tours/tours-ural-mobile@2x.jpg 2x" width="380" height="416" alt=" Панорама с высоты горы на Урале, где сливаются небо и величественные горные вершины.
+                  " loading="lazy">
                 </picture>
                 <div class="card__text-wrapper">
                   <div class="card__top">
@@ -266,7 +267,7 @@
           </div>
           <a class="tours__link" href="#"><span>Показать все туры</span>
             <svg width="9" height="14" aria-hidden="true" focusable="false">
-              <use href="/__spritemap#sprite-arrow"></use>
+              <use href="../__spritemap#sprite-arrow"></use>
             </svg></a>
         </div>
       </section>
@@ -367,7 +368,7 @@
           <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/about/about-desktop@1x.webp 1x, img/images/about/about-desktop@2x.webp 2x" width="660" height="498">
           <source type="image/webp" srcset="img/images/about/about-tablet@1x.webp 1x, img/images/about/about-tablet@2x.webp 2x" width="320" height="400">
           <source media="(min-width: 1440px)" type="image/png" srcset="img/images/about/about-desktop@1x.png 1x, img/images/about/about-desktop@2x.png 2x" width="660" height="498">
-          <img class="about__image" src="img/images/about/about-tablet@1x.png" srcset="img/images/about/about-tablet@2x.png 2x" width="320" height="400" alt="" loading="lazy">
+          <img class="about__image" src="img/images/about/about-tablet@1x.png" srcset="img/images/about/about-tablet@2x.png 2x" width="320" height="400" alt="Туристическая группа совершает пеший поход по горной местности, за ними расположено озеро." loading="lazy">
         </picture>
         <div class="about__text-wrapper">
           <h2>О нас</h2>
@@ -519,7 +520,7 @@
                 <source type="image/webp" srcset="img/images/gallery/photo-1-mobile@1x.webp 1x, img/images/gallery/photo-1-mobile@2x.webp 2x" width="157" height="266">
                 <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-1-desktop@1x.jpg 1x, img/images/gallery/photo-1-desktop@2x.jpg 2x" width="284" height="463">
                 <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-1-tablet@1x.jpg 1x, img/images/gallery/photo-1-tablet@2x.jpg 2x" width="253" height="418">
-                <img src="img/images/gallery/photo-1-mobile@1x.jpg" srcset="img/images/gallery/photo-1-mobile@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
+                <img src="img/images/gallery/photo-1-mobile@1x.jpg" srcset="img/images/gallery/photo-1-mobile@2x.jpg 2x" width="158" height="266" alt="Мужчина с рюкзаком на горной вершине, смотрящий на живописные виды, открывающиеся с высоты." loading="lazy">
               </picture>
             </li>
             <li class="gallery__item swiper-slide">
@@ -529,7 +530,7 @@
                 <source type="image/webp" srcset="img/images/gallery/photo-2-mobile@1x.webp 1x, img/images/gallery/photo-2-mobile@2x.webp 2x" width="157" height="135">
                 <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-2-desktop@1x.jpg 1x, img/images/gallery/photo-2-desktop@2x.jpg 2x" width="284" height="232">
                 <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-2-tablet@1x.jpg 1x, img/images/gallery/photo-2-tablet@2x.jpg 2x" width="252" height="210">
-                <img class="gallery__image" src="img/images/gallery/photo-2-mobile@1x.jpg" srcset="img/images/gallery/photo-2-mobile@2x.jpg 2x" width="158" height="135" alt="Человек на вершине горы любуется видами" loading="lazy">
+                <img class="gallery__image" src="img/images/gallery/photo-2-mobile@1x.jpg" srcset="img/images/gallery/photo-2-mobile@2x.jpg 2x" width="158" height="135" alt=" Люди собираются вокруг костра, создавая атмосферу уюта и дружеского общения под звёздным небом" loading="lazy">
               </picture>
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-3-desktop@1x.webp 1x, img/images/gallery/photo-3-desktop@2x.webp 2x" width="284" height="225">
@@ -537,7 +538,7 @@
                 <source type="image/webp" srcset="img/images/gallery/photo-3-mobile@1x.webp 1x, img/images/gallery/photo-3-mobile@2x.webp 2x" width="158" height="129">
                 <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-3-desktop@1x.jpg 1x, img/images/gallery/photo-3-desktop@2x.jpg 2x" width="284" height="225">
                 <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-3-tablet@1x.jpg 1x, img/images/gallery/photo-3-tablet@2x.jpg 2x" width="252" height="202">
-                <img class="gallery__image" src="img/images/gallery/photo-3-mobile@1x.jpg" srcset="img/images/gallery/photo-3-mobile@2x.jpg 2x" width="158" height="129" alt="Человек на вершине горы любуется видами" loading="lazy">
+                <img class="gallery__image" src="img/images/gallery/photo-3-mobile@1x.jpg" srcset="img/images/gallery/photo-3-mobile@2x.jpg 2x" width="158" height="129" alt="Человек с компасом на горной вершине, отражающий дух приключений и стремление к новым высотам." loading="lazy">
               </picture>
             </li>
             <li class="gallery__item swiper-slide">
@@ -547,7 +548,7 @@
                 <source type="image/webp" srcset="img/images/gallery/photo-4-tablet@1x.webp 1x, img/images/gallery/photo-4-tablet@2x.webp 2x" width="157" height="266">
                 <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-4-desktop@1x.jpg 1x, img/images/gallery/photo-4-desktop@2x.jpg 2x" width="284" height="463">
                 <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-4-tablet@1x.jpg 1x, img/images/gallery/photo-4-tablet@2x.jpg 2x" width="250" height="418">
-                <img src="img/images/gallery/photo-4-tablet@1x.jpg" srcset="img/images/gallery/photo-4-tablet@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
+                <img src="img/images/gallery/photo-4-tablet@1x.jpg" srcset="img/images/gallery/photo-4-tablet@2x.jpg 2x" width="158" height="266" alt="Команда туристов поднимается на вершину горы, стремясь к новым высотам и приключениям." loading="lazy">
               </picture>
             </li>
             <li class="gallery__item swiper-slide">
@@ -557,7 +558,7 @@
                 <source type="image/webp" srcset="img/images/gallery/photo-5-desktop@1x.webp 1x, img/images/gallery/photo-5-desktop@2x.webp 2x" width="157" height="134">
                 <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-5-desktop@1x.jpg 1x, img/images/gallery/photo-5-desktop@2x.jpg 2x" width="284" height="231">
                 <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-5-desktop@1x.jpg 1x, img/images/gallery/photo-5-desktop@2x.jpg 2x" width="252" height="210">
-                <img class="gallery__image" src="img/images/gallery/photo-5-desktop@1x.jpg" srcset="img/images/gallery/photo-5-desktop@2x.jpg 2x" width="158" height="134" alt="Человек на вершине горы любуется видами" loading="lazy">
+                <img class="gallery__image" src="img/images/gallery/photo-5-desktop@1x.jpg" srcset="img/images/gallery/photo-5-desktop@2x.jpg 2x" width="158" height="134" alt="Группа людей, идущих по леднику, окружённая белоснежными ледяными образованиями и ярким голубым небом." loading="lazy">
               </picture>
               <picture>
                 <source media="(min-width: 1440px)" type="image/webp" srcset="img/images/gallery/photo-6-desktop@1x.webp 1x, img/images/gallery/photo-6-desktop@2x.webp 2x" width="284" height="231">
@@ -565,7 +566,7 @@
                 <source type="image/webp" srcset="img/images/gallery/photo-6-desktop@1x.webp 1x, img/images/gallery/photo-6-desktop@2x.webp 2x" width="158" height="128">
                 <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-6-desktop@1x.jpg 1x, img/images/gallery/photo-6-desktop@2x.jpg 2x" width="284" height="228">
                 <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-6-desktop@1x.jpg 1x, img/images/gallery/photo-6-desktop@2x.jpg 2x" width="252" height="206">
-                <img class="gallery__image" src="img/images/gallery/photo-6-desktop@1x.jpg" srcset="img/images/gallery/photo-6-desktop@2x.jpg 2x" width="158" height="128" alt="Человек на вершине горы любуется видами" loading="lazy">
+                <img class="gallery__image" src="img/images/gallery/photo-6-desktop@1x.jpg" srcset="img/images/gallery/photo-6-desktop@2x.jpg 2x" width="158" height="128" alt="Кемпинг под звездами: палатка, огонь и ночное небо, усыпанное яркими звездами, создают атмосферу уединения." loading="lazy">
               </picture>
             </li>
             <li class="gallery__item swiper-slide">
@@ -575,7 +576,7 @@
                 <source type="image/webp" srcset="img/images/gallery/photo-7-desktop@1x.webp 1x, img/images/gallery/photo-7-desktop@2x.webp 2x" width="158" height="266">
                 <source media="(min-width: 1440px)" type="image/jpg" srcset="img/images/gallery/photo-7-desktop@1x.jpg 1x, img/images/gallery/photo-7-desktop@2x.jpg 2x" width="284" height="463">
                 <source media="(min-width: 768px)" type="image/jpg" srcset="img/images/gallery/photo-7-desktop@1x.jpg 1x, img/images/gallery/photo-7-desktop@2x.jpg 2x" width="253" height="418">
-                <img class="gallery__image" src="img/images/gallery/photo-7-desktop@1x.jpg" srcset="img/images/gallery/photo-7-desktop@2x.jpg 2x" width="158" height="266" alt="Человек на вершине горы любуется видами" loading="lazy">
+                <img class="gallery__image" src="img/images/gallery/photo-7-desktop@1x.jpg" srcset="img/images/gallery/photo-7-desktop@2x.jpg 2x" width="158" height="266" alt="Два человека у костра в лесу возле гор, наслаждаясь теплом и природой вокруг." loading="lazy">
               </picture>
             </li>
           </ul>
