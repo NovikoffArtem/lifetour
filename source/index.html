@@ -9,11 +9,11 @@
 
   <title>Lifetour</title>
 
-  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-  <link rel="manifest" href="lifetour.webmanifest" />
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="manifest" href="lifetour.webmanifest">
 
   <link rel="preload" href="fonts/montserrat-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -31,7 +31,8 @@
     <div class="header__wrapper">
       <nav class="header__nav nav" aria-label="Навигация по сайту">
         <button class="nav__toggle button" type="button" aria-expanded="false">
-          <span class="nav__toggle-inner" aria-label="Открыть меню"></span>
+          <span class="nav__toggle-inner"></span>
+          <span class="visually-hidden">Открыть меню</span>
         </button>
         <a class="header__logo" aria-current="page" href="#">
           <img class="logo logo--header" src="img/images/logo/logo.svg" alt="Логотип" width="142" height="42">
@@ -292,7 +293,7 @@
                 </picture>
                 <div class="trainers__card-title-wrapper">
                   <h4>Александр Прокофьев</h4>
-                  <a class="social__link social__link--trainers" href="#"><span class="visually-hidden">Страница в сети ВК Александра Прокофьева</span></a>
+                  <a class="trainers__link" href="#"><span class="visually-hidden">Страница в сети ВК Александра Прокофьева</span></a>
                 </div>
                 <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
               </li>
@@ -303,7 +304,7 @@
                 </picture>
                 <div class="trainers__card-title-wrapper">
                   <h4>Светлана Афиногенова</h4>
-                  <a class="social__link social__link--trainers" href="#"><span class="visually-hidden">Страница в сети ВК Светланы Афиногеновой</span></a>
+                  <a class="trainers__link" href="#"><span class="visually-hidden">Страница в сети ВК Светланы Афиногеновой</span></a>
                 </div>
                 <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
               </li>
@@ -314,7 +315,7 @@
                 </picture>
                 <div class="trainers__card-title-wrapper">
                   <h4>Надежда Колесниченко</h4>
-                  <a class="social__link social__link--trainers" href="#"><span class="visually-hidden">Страница в сети ВК Надежды Колесниченко</span></a>
+                  <a class="trainers__link" href="#"><span class="visually-hidden">Страница в сети ВК Надежды Колесниченко</span></a>
                 </div>
                 <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно и уверенно.</p>
               </li>
@@ -325,7 +326,7 @@
                 </picture>
                 <div class="trainers__card-title-wrapper">
                   <h4>Федор Кайгородов</h4>
-                  <a class="social__link social__link--trainers" href="#"><span class="visually-hidden">Страница в сети ВК Федора Кайгородова</span></a>
+                  <a class="trainers__link" href="#"><span class="visually-hidden">Страница в сети ВК Федора Кайгородова</span></a>
                 </div>
                 <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
               </li>
@@ -336,7 +337,7 @@
                 </picture>
                 <div class="trainers__card-title-wrapper">
                   <h4>Даниэль Васнецов</h4>
-                  <a class="social__link social__link--trainers" href="#"><span class="visually-hidden">Страница в сети ВК Даниэля Васнецова</span></a>
+                  <a class="trainers__link" href="#"><span class="visually-hidden">Страница в сети ВК Даниэля Васнецова</span></a>
                 </div>
                 <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
               </li>
@@ -345,17 +346,17 @@
           <div class="training__process training-process">
             <h3 class="training-process__title">Процесс обучения</h3>
             <ul class="training-process__list">
-              <li class="trainig-process__item trainig-process__item--map">
-                <p class="trainig-process__desc">Изучение спортивного туристского движения</p>
+              <li class="training-process__item training-process__item--map">
+                <p class="training-process__desc">Изучение спортивного туристского движения</p>
               </li>
-              <li class="trainig-process__item trainig-process__item--boot">
-                <p class="trainig-process__desc">Подготовка и техническое снаряжение в походах</p>
+              <li class="training-process__item training-process__item--boot">
+                <p class="training-process__desc">Подготовка и техническое снаряжение в походах</p>
               </li>
-              <li class="trainig-process__item trainig-process__item--pine">
-                <p class="trainig-process__desc">Лекции по окружающей среде, экологии и гигиене</p>
+              <li class="training-process__item training-process__item--pine">
+                <p class="training-process__desc">Лекции по окружающей среде, экологии и гигиене</p>
               </li>
-              <li class="trainig-process__item trainig-process__item--mountain">
-                <p class="trainig-process__desc">Разъяснение сложности горных препятствий</p>
+              <li class="training-process__item training-process__item--mountain">
+                <p class="training-process__desc">Разъяснение сложности горных препятствий</p>
               </li>
             </ul>
           </div>
@@ -636,7 +637,7 @@
         </picture>
       </div>
     </section>
-    <section class="footer">
+    <div class="footer">
       <div class="footer__wrapper content-wrapper">
         <div class="footer__top-wrapper">
           <a class="footer__logo-link" href="#">
@@ -670,7 +671,7 @@
         </ul>
         <a class="footer__copyright" href="#">Политика конфиденциальности</a>
       </div>
-    </section>
+    </div>
   </footer>
   <script type="module" src="js/main.js"></script>
 </body>

@@ -76,6 +76,44 @@
   }
 }
 
+.trainers__link {
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: relative;
+  border: 1px solid $border-icon;
+  transition: all 250ms ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    mask-repeat: no-repeat;
+    background-color: $base-text-color;
+    mask-image: url("../__spritemap#sprite-vk-view");
+    width: 14px;
+    height: 8px;
+  }
+
+  &:hover {
+    border-color: $base-text-color;
+  }
+
+  &:focus-visible {
+    border: none;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $theme-color;
+    border-color: $theme-color;
+  }
+
+  &:active::after {
+    background-color: $base-light;
+  }
+}
 
 .trainers__card-image {
   margin-bottom: 15px;

@@ -67,7 +67,7 @@
   }
 }
 
-.trainig-process__item {
+.training-process__item {
   padding-left: 63px;
   position: relative;
   display: flex;
@@ -119,7 +119,7 @@
   }
 }
 
-.trainig-process__item--boot {
+.training-process__item--boot {
   grid-column: 1/2;
 
   &::after {
@@ -134,7 +134,7 @@
   }
 }
 
-.trainig-process__item--map::after {
+.training-process__item--map::after {
   background-image: url("../__spritemap#sprite-process-map-view");
   left: 29px;
   top: 2px;
@@ -144,7 +144,7 @@
   }
 }
 
-.trainig-process__item--pine {
+.training-process__item--pine {
   &::before {
     @media (min-width: $desktop-width) {
       left: -11px;
@@ -162,7 +162,7 @@
   }
 }
 
-.trainig-process__item--mountain {
+.training-process__item--mountain {
   grid-column: 2/3;
   grid-row: 1/2;
   justify-self: start;
@@ -178,7 +178,7 @@
   }
 }
 
-.trainig-process__desc {
+.training-process__desc {
   margin: 0;
 
 

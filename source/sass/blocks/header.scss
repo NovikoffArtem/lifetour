@@ -50,6 +50,7 @@
 
   &:focus-visible {
     outline: 1px solid $base-light;
+    opacity: 0.5;
   }
 }
 

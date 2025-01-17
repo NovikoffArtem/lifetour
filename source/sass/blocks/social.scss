@@ -53,16 +53,6 @@
   }
 }
 
-.social__link--trainers {
-  width: 24px;
-  height: 24px;
-
-  &::after {
-    mask-image: url("../__spritemap#sprite-vk-view");
-    width: 14px;
-    height: 8px;
-  }
-}
 
 .social__link--vk::after {
   mask-image: url("../__spritemap#sprite-vk-view");
@@ -81,4 +71,3 @@
   width: 14px;
   height: 15px;
 }
-
