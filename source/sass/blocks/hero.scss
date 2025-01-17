@@ -325,10 +325,30 @@
     width: 20px;
     height: 20px;
   }
+
+  &:active {
+    background-color: $light-op-5;
+    border-width: 2px;
+  }
+
+  &:hover {
+    background-color: $pag-hov-col;
+    border-width: 2px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $light-op-5;
+    outline-offset: 2px;
+  }
 }
 
 .hero .swiper-pagination-bullet-active {
   background: $base-light;
+  pointer-events: none;
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 

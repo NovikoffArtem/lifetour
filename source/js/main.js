@@ -29,10 +29,6 @@ export const setupHeroSwiper = () => {
 };
 setupHeroSwiper();
 
-const activeSlide = document.querySelector('.hero .swiper-slide-active');
-const link = activeSlide.querySelector('.hero__link');
-link.setAttribute('tabindex', '-1');
-
 
 export const setupTrainingSwiper = () => {
   if(document.querySelector('.trainers')){
@@ -231,15 +227,60 @@ export const setupGallerySwiper = () => {
 };
 setupGallerySwiper();
 
+// бургер
+const headerButton = document.querySelector('.nav__toggle');
+const navMenu = document.querySelector('.nav');
+const body = document.querySelector('.page-body');
+const navLink = navMenu.querySelectorAll('.nav__link');
+const navList = navMenu.querySelector('.nav__list');
+
+const changeMenu = () => {
+  navMenu.classList.toggle('nav--opened');
+  body.classList.toggle('page-body--block');
+  navList.toggleAttribute('inert');
+
+  if(navMenu.classList.contains('nav--opened')) {
+    headerButton.setAttribute('aria-expanded', 'true');
+  } else {
+    headerButton.setAttribute('aria-expanded', 'false');
+  }
+
+  navLink.forEach((e) => e.addEventListener('click', () => {
+    if ((navMenu.classList.contains('nav--opened')) && (window.innerWidth < 1150)) {
+      navMenu.classList.remove('nav--opened');
+      body.classList.remove('page-body--block');
+      navList.setAttribute('inert', '');
+    }
+  }));
+};
+
+
+headerButton.addEventListener('click', changeMenu);
+
+const setAttrToTitle = (elem) => {
+  const sectionTitle = document.querySelectorAll(elem);
+  sectionTitle.forEach((e) => e.setAttribute('data-title', `${e.textContent}`),
+  );
+};
+
+setAttrToTitle('h2');
+setAttrToTitle('.button--primary');
+
+
 function handleResize() {
   if (window.innerWidth >= 1150) {
     if (!advSwiper) {
       dublicateElem('.advantages__list');
       setupAdvSwiper();
     }
+    navList.removeAttribute('inert');
   } else {
     destroySwiper(advSwiper);
     deleteDublicate('.advantages__list');
+
+    if(!navMenu.classList.contains('nav--opened')) {
+      navList.setAttribute('inert', '');
+    }
   }
 
 }
@@ -249,37 +290,3 @@ handleResize();
 window.addEventListener('resize', handleResize);
 
 
-// бургер
-const headerButton = document.querySelector('.nav__toggle');
-const navMenu = document.querySelector('.nav');
-const body = document.querySelector('.page-body');
-const navLink = document.querySelectorAll('.nav__link');
-
-const changeMenu = () => {
-  navMenu.classList.toggle('nav--opened');
-  body.classList.toggle('page-body--block');
-  navLink.forEach((e) => e.addEventListener('click', () => {
-    if (navMenu.classList.contains('nav--opened')) {
-      navMenu.classList.remove('nav--opened');
-      body.classList.remove('page-body--block');
-    }
-  }));
-};
-
-
-headerButton.addEventListener('click', changeMenu);
-
-const sectionTitle = document.querySelectorAll('h2');
-
-const setAttrToTitle = () => {
-
-  sectionTitle.forEach((e) => e.setAttribute('data-title', `${e.textContent}`),
-  );
-};
-setAttrToTitle();
-
-
-// const addClassToTitle = () => {
-//   document.querySelector('.about h2').classList.add('section-title');
-// };
-// addClassToTitle();

@@ -32,6 +32,7 @@
   transform: translateY(-100vh);
   opacity: 0;
   transition: all 300ms ease-in;
+  z-index: 1;
 
   @media (min-width: $min-tablet-width) {
     top: 70px;
@@ -43,8 +44,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 600px;
-
-    // justify-self: center;
     margin-left: 30px;
     position: static;
     order: 0;
@@ -155,9 +154,15 @@
   transition: all 300ms ease;
   transform: translateY(0);
   opacity: 1;
+  z-index: -3;
 
   @media (min-width: $tablet-width) {
     padding: 25px 45px 57px;
+  }
+
+  @media (min-width: $max-tablet-width) {
+    padding: 0;
+    z-index: 2;
   }
 }
 
@@ -193,14 +198,9 @@
     }
 
     @media (min-width: $max-tablet-width) {
-      width: calc(100% - 30px);
-      left: 15px;
+      width: calc(100% - 20px);
+      left: 10px;
       bottom: 12px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: calc(100% - 30px);
-      left: 15px;
     }
   }
 

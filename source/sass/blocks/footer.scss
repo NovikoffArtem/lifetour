@@ -99,8 +99,8 @@
 }
 
 .footer__copyright {
-  text-align: center;
-  display: block;
+  display: flex;
+  justify-self: center;
   text-decoration: none;
   color: inherit;
   line-height: 1;

@@ -76,24 +76,6 @@
   }
 }
 
-.trainers__link {
-  display: block;
-  width: 24px;
-  height: 24px;
-  position: relative;
-  border: 1px solid $border-icon;
-}
-
-.trainers__link::after {
-  content: "";
-  width: 14px;
-  height: 8px;
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  mask-image: url("../__spritemap#sprite-vk-view");
-  background-color: $base-text-color;
-}
 
 .trainers__card-image {
   margin-bottom: 15px;

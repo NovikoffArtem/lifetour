@@ -13,22 +13,50 @@
   border: none;
   background-color: $theme-color;
   position: relative;
+  transition: all 200ms ease-in;
 
   &:disabled {
     background-color: $disabled;
+    pointer-events: none;
   }
-}
 
-.swiper-button::after {
-  content: "";
-  width: 18px;
-  height: 10px;
-  mask-image: url("../__spritemap#sprite-left-view");
-  mask-repeat: no-repeat;
-  inset: 0;
-  margin: auto;
-  background-color: $base-light;
-  position: absolute;
+  &::after {
+    content: "";
+    width: 18px;
+    height: 10px;
+    mask-image: url("../__spritemap#sprite-left-view");
+    mask-repeat: no-repeat;
+    inset: 0;
+    margin: auto;
+    background-color: $base-light;
+    position: absolute;
+  }
+
+  &:hover {
+    background-color: $base-light;
+    border: 1px solid $active-color;
+  }
+
+  &:hover::after {
+    background-color: $active-color;
+  }
+
+  &:focus-visible {
+    background-color: $base-light;
+    outline: none;
+  }
+
+  &:focus-visible::after {
+    background-color: $active-color;
+  }
+
+  &:active {
+    background-color: $active-color;
+  }
+
+  &:active::after {
+    background-color: $base-light;
+  }
 }
 
 .swiper-button--next {

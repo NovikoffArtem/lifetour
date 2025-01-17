@@ -175,6 +175,20 @@
   line-height: 20px;
   color: inherit;
   text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    color: $theme-color;
+  }
+
+  &:focus-visible {
+    color: $theme-color;
+    outline: none;
+  }
+
+  &:active {
+    color: $active-color;
+  }
 }
 
 .contacts__item-desc {

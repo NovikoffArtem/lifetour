@@ -30,13 +30,13 @@
   <header class="header" data-test="header">
     <div class="header__wrapper">
       <nav class="header__nav nav" aria-label="Навигация по сайту">
-        <button class="nav__toggle button" type="button">
+        <button class="nav__toggle button" type="button" aria-expanded="false">
           <span class="nav__toggle-inner" aria-label="Открыть меню"></span>
         </button>
         <a class="header__logo" aria-current="page" href="#">
           <img class="logo logo--header" src="img/images/logo/logo.svg" alt="Логотип" width="142" height="42">
         </a>
-        <ul class="nav__list">
+        <ul class="nav__list" inert>
           <li class="nav__list-item"><a class="nav__link" href="#tours">Туры</a></li>
           <li class="nav__list-item"><a class="nav__link" href="#training">Обучение</a></li>
           <li class="nav__list-item"><a class="nav__link" href="#about">О нас</a></li>
@@ -292,7 +292,7 @@
                 </picture>
                 <div class="trainers__card-title-wrapper">
                   <h4>Александр Прокофьев</h4>
-                  <a class="trainers__link" href="#"><span class="visually-hidden">Страница в сети ВК Александра Прокофьева</span></a>
+                  <a class="social__link social__link--trainers" href="#"><span class="visually-hidden">Страница в сети ВК Александра Прокофьева</span></a>
                 </div>
                 <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
               </li>
@@ -303,7 +303,7 @@
                 </picture>
                 <div class="trainers__card-title-wrapper">
                   <h4>Светлана Афиногенова</h4>
-                  <a class="trainers__link" href="#"><span class="visually-hidden">Страница в сети ВК Светланы Афиногеновой</span></a>
+                  <a class="social__link social__link--trainers" href="#"><span class="visually-hidden">Страница в сети ВК Светланы Афиногеновой</span></a>
                 </div>
                 <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
               </li>
@@ -314,7 +314,7 @@
                 </picture>
                 <div class="trainers__card-title-wrapper">
                   <h4>Надежда Колесниченко</h4>
-                  <a class="trainers__link" href="#"><span class="visually-hidden">Страница в сети ВК Надежды Колесниченко</span></a>
+                  <a class="social__link social__link--trainers" href="#"><span class="visually-hidden">Страница в сети ВК Надежды Колесниченко</span></a>
                 </div>
                 <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно и уверенно.</p>
               </li>
@@ -325,7 +325,7 @@
                 </picture>
                 <div class="trainers__card-title-wrapper">
                   <h4>Федор Кайгородов</h4>
-                  <a class="trainers__link" href="#"><span class="visually-hidden">Страница в сети ВК Федора Кайгородова</span></a>
+                  <a class="social__link social__link--trainers" href="#"><span class="visually-hidden">Страница в сети ВК Федора Кайгородова</span></a>
                 </div>
                 <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
               </li>
@@ -336,7 +336,7 @@
                 </picture>
                 <div class="trainers__card-title-wrapper">
                   <h4>Даниэль Васнецов</h4>
-                  <a class="trainers__link" href="#"><span class="visually-hidden">Страница в сети ВК Даниэля Васнецова</span></a>
+                  <a class="social__link social__link--trainers" href="#"><span class="visually-hidden">Страница в сети ВК Даниэля Васнецова</span></a>
                 </div>
                 <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
               </li>
@@ -591,11 +591,11 @@
           <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
           <form class="form__main" action="https://echo.htmlacademy.ru" method="post">
             <label class="form__label">
-              <input class="form__field form__field--phone" type="tel" name="phone" id="phone" placeholder="+7 (000)-000-00-00" minlength="2" maxlength="14" required>
+              <input class="form__field form__field--phone" type="tel" name="phone" id="phone" placeholder="+7 (000)-000-00-00" minlength="2" maxlength="18" required>
               <span class="form__label-text">Телефон</span>
             </label>
             <label class="form__label">
-              <input class="form__field form__field--email" type="email" name="email" id="email" placeholder="email@email.ru" required>
+              <input class="form__field form__field--email" type="email" name="email" id="email" placeholder="email@email.ru" pattern="[а-яА-ЯёЁa-zA-Z0-9._%+-]+@[а-яА-ЯёЁa-zA-Z0-9.-]+\.[а-яА-ЯёЁa-zA-Z]{2,}" required>
               <span class="form__label-text">Email</span>
             </label>
             <button class="form__button button--primary button" type="submit">Отправить</button>
