@@ -44,14 +44,17 @@
     transition: all 200ms ease-in;
   }
 
-  &:hover::before {
-    opacity: 1;
+  @media (min-width: $max-tablet-width) {
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:hover::after {
+      height: 100%;
+      opacity: 1;
+    }
   }
 
-  &:hover::after {
-    height: 100%;
-    opacity: 1;
-  }
 
   &:focus-visible {
     outline: none;
