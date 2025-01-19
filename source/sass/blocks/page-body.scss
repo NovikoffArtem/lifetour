@@ -21,6 +21,7 @@
 .page-body--block {
   overflow: hidden;
 
+
   @media (min-width: $max-tablet-width) {
     overflow: auto;
   }

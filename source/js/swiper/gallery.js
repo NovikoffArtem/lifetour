@@ -22,7 +22,6 @@ export const setupGallerySwiper = () => {
           enabled: false,
         }
       },
-
     });
   }
 };

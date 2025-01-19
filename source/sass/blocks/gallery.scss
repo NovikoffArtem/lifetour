@@ -120,7 +120,7 @@
 .gallery .swiper-slide {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 5px;
 
   @media (min-width: $tablet-width) {
     height: 418px;
