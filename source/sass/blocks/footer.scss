@@ -3,7 +3,7 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 33px;
-    padding-right: 50px;
+    padding-right: 45px;
   }
 
   @media (min-width: $max-tablet-width) {
@@ -21,15 +21,24 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 28px;
+    margin-bottom: 34px;
   }
 
   @media (min-width: $max-tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 31px;
   }
 }
 
 .footer__logo-link {
+  transition: all 300ms ease;
+  border-radius: 10px;
+
+  &:focus-visible {
+    outline: 2px solid $base-text-color;
+    opacity: 0.8;
+    outline-offset: 5px;
+  }
+
   @media (min-width: $max-tablet-width) {
     margin-left: 29px;
   }
@@ -51,19 +60,23 @@
 
   @media (min-width: $min-tablet-width-2) {
     display: flex;
-    gap: 15px;
+    gap: 10px;
   }
 
   @media (min-width: $tablet-width) {
-    gap: 25px;
+    gap: 13px;
     margin-bottom: 0;
-    padding-bottom: 4px;
+  }
+
+  @media (min-width: $max-tablet-width) {
+    gap: 15px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 30px;
+    gap: 21px;
     margin-right: 29px;
     max-width: 600px;
+    padding-bottom: 0;
   }
 }
 
@@ -73,15 +86,67 @@
   text-decoration: none;
   color: inherit;
   padding: 7px 15px;
-  display: block;
+  display: inline-block;
+  position: relative;
+  transition: all 300ms ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 1px;
+    bottom: 5px;
+    left: 10px;
+    background-color: $base-text-color;
+    transform: scaleX(0);
+    transition: all 300ms ease;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+      left: 0;
+    }
+  }
 
   @media (min-width: $tablet-width) {
-    padding-inline: 0;
+    padding-inline: 6px;
   }
 
   @media (min-width: $max-tablet-width) {
     font-size: 16px;
+    padding-inline: 5px;
   }
+
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:focus-visible {
+    outline: 1px solid $base-text-color;
+    outline-offset: -6px;
+
+    @media (min-width: $tablet-width) {
+      outline-offset: -3px;
+    }
+
+    @media (min-width: $max-tablet-width) {
+      outline-offset: -4px;
+    }
+  }
+
+  &:active {
+    color: $theme-color;
+  }
+
+  &:active::before {
+    background-color: $theme-color;
+  }
+}
+
+
+.footer__nav-link--disabled {
+  color: $disabled;
+  pointer-events: none;
 }
 
 .footer__nav-phone {
@@ -95,7 +160,26 @@
     text-decoration: none;
     color: inherit;
     max-width: 200px;
+    transition: all 300ms ease;
   }
+
+  &:hover {
+    color: $border-color;
+  }
+
+  &:focus-visible {
+    color: $theme-color;
+    outline: none;
+  }
+
+  &:active {
+    color: $active-color;
+  }
+}
+
+.footer__nav-phone--disabled {
+  color: $disabled;
+  pointer-events: none;
 }
 
 .footer__copyright {
@@ -104,6 +188,22 @@
   text-decoration: none;
   color: inherit;
   line-height: 1;
-  padding-top: 11px;
+  padding: 11px;
+
   font-weight: 300;
+  transition: all 300ms ease;
+
+  &:hover {
+    color: $theme-color;
+  }
+
+  &:focus-visible {
+    color: $theme-color;
+    outline: 1px solid $base-text-color;
+    outline-offset: -8px;
+  }
+
+  &:active {
+    color: $active-color;
+  }
 }

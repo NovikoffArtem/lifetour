@@ -592,11 +592,11 @@
           <p>Заполните форму и наш оператор свяжется с вами для консультации.</p>
           <form class="form__main" action="https://echo.htmlacademy.ru" method="post">
             <label class="form__label">
-              <input class="form__field form__field--phone" type="tel" name="phone" id="phone" placeholder="+7 (000)-000-00-00" minlength="2" maxlength="18" required>
+              <input class="form__field form__field--phone" type="tel" name="phone" id="phone" placeholder="+7 (000)-000-00-00" minlength="2" maxlength="18" oninvalid="document.querySelector('input[type=tel]').style.border = '1px solid #ff121f';" required>
               <span class="form__label-text">Телефон</span>
             </label>
             <label class="form__label">
-              <input class="form__field form__field--email" type="email" name="email" id="email" placeholder="email@email.ru" pattern="[а-яА-ЯёЁa-zA-Z0-9._%+-]+@[а-яА-ЯёЁa-zA-Z0-9.-]+\.[а-яА-ЯёЁa-zA-Z]{2,}" required>
+              <input class="form__field form__field--email" type="email" name="email" id="email" placeholder="email@email.ru" pattern="^\S+@\S+\.\S+$" title="Следуйте указанному формату: email@email.ru или email@почта.ру." oninvalid="document.querySelector('input[type=email]').style.border = '1px solid #ff121f';" required>
               <span class="form__label-text">Email</span>
             </label>
             <button class="form__button button--primary button" type="submit">Отправить</button>

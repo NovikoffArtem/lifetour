@@ -230,13 +230,13 @@ setupGallerySwiper();
 // бургер
 const headerButton = document.querySelector('.nav__toggle');
 const navMenu = document.querySelector('.nav');
-const body = document.querySelector('.page-body');
+const bodyPage = document.querySelector('.page-body');
 const navLink = navMenu.querySelectorAll('.nav__link');
 const navList = navMenu.querySelector('.nav__list');
 
 const changeMenu = () => {
   navMenu.classList.toggle('nav--opened');
-  body.classList.toggle('page-body--block');
+  bodyPage.classList.toggle('page-body--block');
   navList.toggleAttribute('inert');
 
   if(navMenu.classList.contains('nav--opened')) {
@@ -248,7 +248,7 @@ const changeMenu = () => {
   navLink.forEach((e) => e.addEventListener('click', () => {
     if ((navMenu.classList.contains('nav--opened')) && (window.innerWidth < 1150)) {
       navMenu.classList.remove('nav--opened');
-      body.classList.remove('page-body--block');
+      bodyPage.classList.remove('page-body--block');
       navList.setAttribute('inert', '');
     }
   }));
@@ -288,3 +288,117 @@ function handleResize() {
 handleResize();
 
 window.addEventListener('resize', handleResize);
+
+
+const form = document.querySelector('.form__main');
+const inputs = form.querySelectorAll('.form__field');
+const formBtn = form.querySelector('.form__button');
+const SubmitButtonText = {
+  IDLE: 'Отправить',
+  SENDING: 'Отправляю...'
+};
+
+
+const toggleSubmitButton = () => {
+  formBtn.textContent = SubmitButtonText.SENDING;
+  formBtn.disabled = true;
+
+  setTimeout(() => {
+    formBtn.textContent = SubmitButtonText.IDLE;
+    formBtn.disabled = false;
+  }, 500);
+};
+
+const clearFields = () => {
+  setTimeout(() => {
+    Array.from(inputs).forEach((input) => {
+      input.value = '';
+      input.style.border = '1px solid transparent';
+    });
+  }, 500);
+};
+
+
+export const submitForm = () => {
+  form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    toggleSubmitButton();
+    clearFields();
+  });
+};
+submitForm();
+
+
+const setupPhoneMask = () => {
+  const phoneInput = document.querySelector('.form__field--phone');
+
+  const getInputNumbersValue = function (input) {
+    return input.value.replace(/\D/g, '');
+  };
+
+  const onPhonePaste = function (e) {
+    const input = e.target,
+      inputNumbersValue = getInputNumbersValue(input);
+    const pasted = e.clipboardData || window.clipboardData;
+    if (pasted) {
+      const pastedText = pasted.getData('Text');
+      if (/\D/g.test(pastedText)) {
+        input.value = inputNumbersValue;
+      }
+    }
+  };
+
+  const onPhoneInput = function (e) {
+    const input = e.target,
+      inputNumbersValue = getInputNumbersValue(input);
+    const selectionStart = input.selectionStart;
+    let formattedInputValue = '';
+
+    if (!inputNumbersValue) {
+      input.value = '';
+      return ;
+    }
+
+    if (input.value.length !== selectionStart) {
+      if (e.data && /\D/g.test(e.data)) {
+        input.value = inputNumbersValue;
+      }
+      return;
+    }
+
+    if (['7', '8', '9'].indexOf(inputNumbersValue[0]) > -1) {
+      if (inputNumbersValue[0] === '9') {
+        formattedInputValue = `7${ inputNumbersValue}`;
+      }
+      const firstSymbols = (inputNumbersValue[0] === '8') ? '8' : '+7';
+      formattedInputValue = input.value = `${firstSymbols } `;
+      if (inputNumbersValue.length > 1) {
+        formattedInputValue += `(${ inputNumbersValue.substring(1, 4)}`;
+      }
+      if (inputNumbersValue.length >= 5) {
+        formattedInputValue += `) ${ inputNumbersValue.substring(4, 7)}`;
+      }
+      if (inputNumbersValue.length >= 8) {
+        formattedInputValue += `-${ inputNumbersValue.substring(7, 9)}`;
+      }
+      if (inputNumbersValue.length >= 10) {
+        formattedInputValue += `-${ inputNumbersValue.substring(9, 11)}`;
+      }
+    } else {
+      formattedInputValue = `+${ inputNumbersValue.substring(0, 16)}`;
+    }
+    input.value = formattedInputValue;
+  };
+  const onPhoneKeyDown = function (e) {
+    const inputValue = e.target.value.replace(/\D/g, '');
+    if (e.keyCode === 8 && inputValue.length === 1) {
+      e.target.value = '';
+    }
+  };
+
+  phoneInput.addEventListener('keydown', onPhoneKeyDown);
+  phoneInput.addEventListener('input', onPhoneInput, false);
+  phoneInput.addEventListener('paste', onPhonePaste, false);
+
+};
+setupPhoneMask();
